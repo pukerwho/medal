@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="xMidYMin meet" viewBox="0 0 1440 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>separator-1</title><desc>Created with Sketch.</desc>
+<linearGradient id="myLinearGradient1"
+	x1="0%" y1="0%"
+	x2="0%" y2="100%"
+	spreadMethod="pad">
+	<stop offset="0%"   stop-color="#262626" stop-opacity="1"/>
+	<stop offset="60%" stop-color="#05050F" stop-opacity="0.1"/>
+</linearGradient>
+<g id="FEATURE-REDESIGN" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Separators"><g id="separator-1">
+<path d="M0,16 C61.469324,2.45763916 204.446592,-2.21083069 428.931805,1.99459045 C765.659624,8.30272217 897.387134,13.9719656 1056.65756,15.6342808 C1162.83785,16.7424909 1290.61889,21.8643973 1440.00069,31 L1440.00069,86 L0,86 L0,16 Z" id="separator-1-dark" style="fill:url(#myLinearGradient1);"></path>
+<path d="M0,44 C69.9638745,24.8952586 217.615268,14.173477 442.954182,11.8346554 C780.962552,8.326423 962.500464,31.8816978 1125.00054,33.886402 C1233.33393,35.2228715 1338.33375,38.5940708 1440,44 L1440,86 L0,86 L0,44 Z" id="separator-1-light" fill="#05050F"></path></g></g></g></svg>
