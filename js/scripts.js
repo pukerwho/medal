@@ -46,6 +46,7 @@ function init() {
   let mobileMenuCover = document.querySelector('.mobile_cover');
   let contentTagId = document.querySelector('#content');
   let footerTag = document.querySelector('footer');
+  
   mobileMenuBtn.addEventListener('click', function(){
     mobileMenuBtn.classList.toggle('open');
     mobileMenuCover.classList.toggle('open');
