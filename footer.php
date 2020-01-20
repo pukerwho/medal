@@ -80,13 +80,13 @@
           foreach ( $contact_pages as $contact_page ): ?>
       			<div class="w-full lg:w-1/4 lg:pl-6 mb-6 lg:mb-0">
       				<div class="roboto-bold text-xl my_yellow_color mb-2">
-      					<?php _e( 'Адрес:', 's-cast' ); ?>
+      					<?php _e( 'Адрес', 's-cast' ); ?>:
       				</div>
       				<div class="roboto-light mb-4">
       					<?php echo carbon_get_post_meta($contact_page, 'crb_contact_address'); ?>
       				</div>
       				<div class="roboto-bold text-xl my_yellow_color mb-2">
-      					<?php _e( 'Телефоны:', 's-cast' ); ?>
+      					<?php _e( 'Телефоны', 's-cast' ); ?>:
       				</div>
       				<div class="roboto-light mb-4">
                 <?php $footer_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
@@ -133,7 +133,7 @@
     		</div>
     	</div>
     	<div class="copyright my_bg_gray text-center py-2">
-  			<span class="my_yellow_color"><?php _e( 'Разработка сайта:', 's-cast' ); ?></span>
+  			<span class="my_yellow_color"><?php _e( 'Разработка сайта', 's-cast' ); ?>:</span>
   			<a href="https://timeto.top" target="_blank">TimeToTop</a>
   		</div>
     </footer>

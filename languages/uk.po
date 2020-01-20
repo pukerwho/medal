@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: S-Cast\n"
+"POT-Creation-Date: 2020-01-18 20:22+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: TimeToTop\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "Индивидуальный дизайн"
+msgstr "Індивідуальний дизайн"
+
+msgid "Заказать звонок"
+msgstr "Замовити дзвінок"
+
+msgid "Продукция"
+msgstr "Продукція"
+
+msgid "Производство изделий по индивидуальному дизайну"
+msgstr "Виробництво виробів за індивідуальним дизайном"
+
+msgid "Закажи шедевр"
+msgstr "Замов шедевр"
+
+msgid "Смотреть каталог"
+msgstr "Дивитися каталог"
+
+msgid "О компании"
+msgstr "Про компанію"
+
+msgid "Наши клиенты"
+msgstr "Наші клієнти"
+
+msgid "Главная"
+msgstr "Главная"
+
+msgid "Адрес"
+msgstr "Головна"
+
+msgid "Телефоны"
+msgstr "Телефони"
+
+msgid "Заказать просчет"
+msgstr "Замовити прорахунок"
+
+msgid "Похожая продукция"
+msgstr "Схожа продукція"
+
+msgid "О производителе"
+msgstr "Про виробника"
+
+msgid "Навигация"
+msgstr "Навігація"
+
+msgid "Разработка сайта"
+msgstr "Розробка сайту"
+
+msgid "Подробнее"
+msgstr "Детальніше"
+
+msgid "Наши преимущества"
+msgstr "Наші переваги"

@@ -4,6 +4,7 @@ include('inc/enqueues.php');
 // Add your theme support ( cf :  http://codex.wordpress.org/Function_Reference/add_theme_support )
 function customThemeSupport() {
     global $wp_version;
+    load_theme_textdomain( 's-cast', get_template_directory() . '/languages' );
     add_theme_support( 'menus' );
     add_theme_support( 'post-thumbnails' );
     // let wordpress manage the title
