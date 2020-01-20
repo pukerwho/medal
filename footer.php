@@ -165,6 +165,20 @@
         </div>
       </div>
     </div>
+    <div class="modal modal_callback" data-modal-id="modal_callback">
+      <div class="modal_block">
+        <div class="my_bg_gray rounded-lg py-8 px-12">
+          <h3 class="roboto-bold text-xl text-center uppercase mb-6"><?php _e( 'Заказать звонок', 's-cast' ); ?></h3>
+          <div>
+            <?php 
+              $form_callback = carbon_get_theme_option(
+            'crb_form_callback'); 
+              echo do_shortcode(''. $form_callback .'');
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal_bg"></div>
     <?php wp_footer(); ?>
 </body>

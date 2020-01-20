@@ -20,7 +20,7 @@ Template Name: ГЛАВНАЯ
 					<div class="slider_text cast-animate mb-6 pl-4">
 						<?php echo carbon_get_the_post_meta('crb_main_description') ?>
 					</div>
-					<div class="slider_btn text-xl inline-block cast-animate">
+					<div class="slider_btn text-xl inline-block modal_click_js cursor-pointer cast-animate" data-modal-id="modal_callback">
 						<i class="icofont-arrow-right"></i>
 						<span><?php _e( 'Заказать звонок', 's-cast' ); ?></span>
 					</div>
