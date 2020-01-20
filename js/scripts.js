@@ -46,7 +46,7 @@ function init() {
   let mobileMenuCover = document.querySelector('.mobile_cover');
   let contentTagId = document.querySelector('#content');
   let footerTag = document.querySelector('footer');
-  
+
   mobileMenuBtn.addEventListener('click', function(){
     mobileMenuBtn.classList.toggle('open');
     mobileMenuCover.classList.toggle('open');
@@ -88,6 +88,7 @@ function init() {
   //Click Order
   let bgModal = document.querySelector('.modal_bg');
   let modalsClickId = document.querySelectorAll('.modal_click_js');
+
   for (modalClickId of modalsClickId) {
     if (modalClickId) {
       modalClickId.addEventListener('click', function(){
@@ -101,6 +102,7 @@ function init() {
   }
 
   //Close Order modal 
+  let modalCloseBtns = document.querySelectorAll('.mobile .modal .close_btn', '.tablet .modal .close_btn');
   let allModals = document.querySelectorAll('.modal');
   document.addEventListener('click', function(e){
     if(e.target.classList.value === 'modal_bg open') {
@@ -110,6 +112,17 @@ function init() {
       }
     }
   });
+
+  if (modalCloseBtns) {
+    for (modalCloseBtn of modalCloseBtns) {
+      modalCloseBtn.addEventListener('click', function(){
+        bgModal.classList.remove('open');
+        for (allModal of allModals) {
+          allModal.classList.remove('open');  
+        }
+      });
+    }
+  }
 
   //Products Animate Hover
   let seeCatalogBtns = document.querySelectorAll('.desktop .catalog_animate_btn-js a');

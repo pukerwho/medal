@@ -51198,17 +51198,17 @@ div.wpcf7 .ajax-loader {
     transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s; }
     @media (max-width: 992px) {
       .modal.open {
-        width: 100%;
-        /*&:before {
-        	content: '';
-        	width: 25px;
-        	height: 25px;
-        	position: absolute;
-        	top: -2rem;
-        	right: 1.5rem;
-        	background: url('../img/close.svg');
-        	background-size: contain;
-        }*/ } }
+        width: 100%; }
+        .modal.open .close_btn {
+          content: '';
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          top: -2rem;
+          right: 1.5rem;
+          background: url("../img/close.svg");
+          background-size: contain;
+          cursor: pointer; } }
   @media (max-width: 992px) {
     .modal_block {
       margin: 0 1rem; } }

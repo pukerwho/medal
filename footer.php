@@ -138,6 +138,7 @@
   		</div>
     </footer>
     <div class="modal modal_order" data-modal-id="modal_order">
+      <div class="close_btn"></div>
     	<div class="modal_block">
     		<div class="my_bg_gray rounded-lg py-8 px-12">
     			<h3 class="roboto-bold text-xl text-center uppercase mb-6"><?php _e( 'Заказать просчет', 's-cast' ); ?></h3>
@@ -152,6 +153,7 @@
     	</div>
     </div>
     <div class="modal modal_innerorder" data-modal-id="modal_innerorder">
+      <div class="close_btn"></div>
       <div class="modal_block">
         <div class="my_bg_gray rounded-lg py-8 px-12">
           <h3 class="roboto-bold text-xl text-center uppercase mb-6"><?php _e( 'Заказать просчет', 's-cast' ); ?></h3>
@@ -166,6 +168,7 @@
       </div>
     </div>
     <div class="modal modal_callback" data-modal-id="modal_callback">
+      <div class="close_btn"></div>
       <div class="modal_block">
         <div class="my_bg_gray rounded-lg py-8 px-12">
           <h3 class="roboto-bold text-xl text-center uppercase mb-6"><?php _e( 'Заказать звонок', 's-cast' ); ?></h3>
