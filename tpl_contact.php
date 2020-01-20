@@ -27,18 +27,18 @@ Template Name: КОНТАКТЫ
 					<?php the_content(); ?>
 				</div>
 				<div class="flex items-start mb-6">
-					<div class="w-1/4 my_yellow_color roboto-medium text-2xl lg:pr-3">
+					<div class="w-1/2 lg:w-1/4 my_yellow_color roboto-medium text-2xl lg:pr-3">
 						<?php _e('Адрес', 's-cast') ?>
 					</div>
-					<div class="w-3/4 text-xl pt-1 lg:pl-3">
+					<div class="w-1/2 lg:w-3/4 text-xl pt-1 lg:pl-3">
 						<?php echo carbon_get_the_post_meta('crb_contact_address'); ?>
 					</div>
 				</div>
 				<div class="flex mb-6">
-					<div class="w-1/4 my_yellow_color roboto-medium text-2xl lg:pr-3">
+					<div class="w-1/2 lg:w-1/4 my_yellow_color roboto-medium text-2xl lg:pr-3">
 						<?php _e('Телефоны', 's-cast') ?>
 					</div>
-					<div class="w-3/4 text-xl pt-1 lg:pl-3">
+					<div class="w-1/2 lg:w-3/4 text-xl pt-1 lg:pl-3">
 						<?php $footer_phones = carbon_get_the_post_meta('crb_contact_phones');
             foreach ($footer_phones as $footer_phone): ?>
     					<div><a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>"><?php echo $footer_phone['crb_contact_phone'] ?></a></div>
@@ -46,10 +46,10 @@ Template Name: КОНТАКТЫ
 					</div>
 				</div>
 				<div class="flex mb-6">
-					<div class="w-1/4 my_yellow_color roboto-medium text-2xl lg:pr-3">
+					<div class="w-1/2 lg:w-1/4 my_yellow_color roboto-medium text-2xl lg:pr-3">
 						<?php _e('Email', 's-cast') ?>
 					</div>
-					<div class="w-3/4 text-xl pt-1 lg:pl-3">
+					<div class="w-1/2 lg:w-3/4 text-xl pt-1 lg:pl-3">
 						<?php $footer_emails = carbon_get_the_post_meta('crb_contact_emails');
             foreach ($footer_emails as $footer_email): ?>
               <div>
