@@ -51022,35 +51022,37 @@ div.wpcf7 .ajax-loader {
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s; }
-@media (max-width: 992px) {
-  .products_item_photo {
-    position: relative; } }
-.products_item_photo img {
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: -webkit-transform 0.35s;
-  -o-transition: transform 0.35s;
-  transition: transform 0.35s;
-  transition: transform 0.35s, -webkit-transform 0.35s; }
-  .products_item_photo img.hover {
-    -webkit-transform: rotate(2deg) scale(1.04);
-    -ms-transform: rotate(2deg) scale(1.04);
-    transform: rotate(2deg) scale(1.04);
+.products_item_photo {
+  height: 20rem; }
+  @media (max-width: 992px) {
+    .products_item_photo {
+      position: relative; } }
+  .products_item_photo img {
     -webkit-transition: -webkit-transform 0.35s;
     transition: -webkit-transform 0.35s;
     -o-transition: transform 0.35s;
     transition: transform 0.35s;
     transition: transform 0.35s, -webkit-transform 0.35s; }
-@media (max-width: 992px) {
-  .products_item_photo:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: -o-linear-gradient(top, rgba(34, 193, 195, 0) 50%, #05050f 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(34, 193, 195, 0)), to(#05050f));
-    background: linear-gradient(180deg, rgba(34, 193, 195, 0) 50%, #05050f 100%); } }
+    .products_item_photo img.hover {
+      -webkit-transform: rotate(2deg) scale(1.04);
+      -ms-transform: rotate(2deg) scale(1.04);
+      transform: rotate(2deg) scale(1.04);
+      -webkit-transition: -webkit-transform 0.35s;
+      transition: -webkit-transform 0.35s;
+      -o-transition: transform 0.35s;
+      transition: transform 0.35s;
+      transition: transform 0.35s, -webkit-transform 0.35s; }
+  @media (max-width: 992px) {
+    .products_item_photo:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: -o-linear-gradient(top, rgba(34, 193, 195, 0) 50%, #05050f 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(34, 193, 195, 0)), to(#05050f));
+      background: linear-gradient(180deg, rgba(34, 193, 195, 0) 50%, #05050f 100%); } }
 
 .about {
   position: relative; }
