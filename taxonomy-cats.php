@@ -106,6 +106,9 @@
 			<?php get_template_part('blocks/product-item', 's-cast') ?>
 		<?php endwhile; endif; wp_reset_postdata(); ?>
 	</div>
+	<div class="w-full pt-10">
+		<?php echo apply_filters( 'the_content', carbon_get_term_meta( get_queried_object_id(), 'crb_term_seotext' ) ); ?>
+	</div>
 </div>
 
 <?php get_footer(); ?>

@@ -10,6 +10,7 @@ function crb_term_options() {
     ->add_fields( array(
     	Field::make( 'textarea', 'crb_term_desc', 'Короткое описание' ),
     	Field::make( 'image', 'crb_term_photo', 'Заглавная картинка' )->set_value_type( 'url'),
+    	Field::make( 'rich_text', 'crb_term_seotext', 'SEO-текст' ),
     ) );
 }
 
