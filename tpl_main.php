@@ -9,18 +9,18 @@ Template Name: ГЛАВНАЯ
 <section id="hero">
 	<div class="hero py-12 lg:py-20">
 		<div class="container mx-auto px-4 lg:px-0">
-			<div class="slider flex flex-col lg:flex-row items-center">
+			<div class="slider flex flex-col lg:flex-row items-center cast-animate">
 				<div class="w-full lg:w-1/2 mb-8 lg:pr-12 lg:mb-0">
-					<div class="slider_subtitle text-xl opacity-75 mb-4">
+					<div class="slider_subtitle text-xl opacity-75 cast-animate mb-4">
 						<?php _e( 'Индивидуальный дизайн', 's-cast' ); ?>
 					</div>
-					<h1 class="slider_title roboto-bold text-2xl lg:text-4xl uppercase mb-6">
+					<h1 class="slider_title roboto-bold text-2xl lg:text-4xl uppercase cast-animate mb-6">
 						<?php echo carbon_get_the_post_meta('crb_main_title') ?>
 					</h1>
-					<div class="slider_text mb-6 pl-4">
+					<div class="slider_text cast-animate mb-6 pl-4">
 						<?php echo carbon_get_the_post_meta('crb_main_description') ?>
 					</div>
-					<div class="slider_btn text-xl inline-block">
+					<div class="slider_btn text-xl inline-block cast-animate">
 						<i class="icofont-arrow-right"></i>
 						<span><?php _e( 'Заказать звонок', 's-cast' ); ?></span>
 					</div>
@@ -49,17 +49,17 @@ Template Name: ГЛАВНАЯ
 	<div class="products mb-12 lg:mb-20">
 		<div class="container mx-auto px-4 lg:px-0">
 			<div class="title_bg_2 mb-12">
-				<h2 class="roboto-bold text-4xl uppercase mb-2">
+				<h2 class="products_title roboto-bold text-4xl uppercase cast-animate mb-2">
 					<?php _e( 'Продукция', 's-cast' ); ?>
 				</h2>
-				<div class="roboto-light text-2xl">
+				<div class="products_subtitle roboto-light text-2xl cast-animate">
 					<?php _e( 'Производство изделий по индивидуальному дизайну', 's-cast' ); ?>
 				</div>
 			</div>
 			<div class="products_blocks">
 				<?php $cats = get_terms( array( 'taxonomy' => 'cats', 'parent' => 0, 'hide_empty' => false ) );
 					foreach ( $cats as $cat ): ?>
-					<div class="products_item mb-6">
+					<div class="products_item cast-animate mb-6">
 						<div class="products_item_bg flex flex-col-reverse lg:flex-row">
 							<div class="products_item_info w-full lg:w-2/3 flex flex-col justify-center rounded-b-lg lg:rounded-lg p-6">
 								<div class="logo flex items-center mx-0 mb-6">
@@ -108,11 +108,11 @@ Template Name: ГЛАВНАЯ
     ];
     $about_pages = get_posts( $args_about_page );
     foreach ( $about_pages as $about_page ): ?>
-			<div class="about_photo lg:pr-6">
+			<div class="about_photo cast-animate lg:pr-6">
 				<img src="<?php echo get_the_post_thumbnail_url( $about_page ); ?>" alt="" loading="lazy" class="w-full h-full object-cover">
 			</div>
 			<div class="container mx-auto px-4 lg:px-0">
-				<div class="about_content lg:pl-6">
+				<div class="about_content cast-animate lg:pl-6">
 					<h2 class="about_title roboto-bold text-4xl uppercase mb-6">
 						<?php _e( 'О компании', 's-cast' ); ?>
 					</h2>
@@ -128,7 +128,7 @@ Template Name: ГЛАВНАЯ
 <section id="clients">
 	<div class="clients mb-20">
 		<div class="container mx-auto px-4 lg:px-0">
-			<h2 class="roboto-bold text-4xl text-center uppercase mb-6">
+			<h2 class="clients_title roboto-bold text-4xl text-center uppercase cast-animate mb-6">
 				<?php _e( 'Наши клиенты', 's-cast' ); ?>
 			</h2>
 			<div class="swiper-container swiper-container-clients">

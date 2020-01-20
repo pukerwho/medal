@@ -11,6 +11,21 @@ function init() {
     },
   });
 
+  let headerBottom = document.querySelector('.header_bottom');
+
+  function fixedHeader(currentScroll) {
+    if (currentScroll > 110) {
+      headerBottom.classList.add('header_bottom_fixed');
+    } else {
+      headerBottom.classList.remove('header_bottom_fixed');
+    }
+  }
+
+  window.addEventListener('scroll', function(){
+    currentScroll = pageYOffset;
+    fixedHeader(currentScroll);
+  });
+
   function SliderPost() {
     let lightSlider = document.querySelector('#lightSlider');
     if (lightSlider) {
@@ -26,7 +41,7 @@ function init() {
 
   SliderPost();
   
-  // Show/Hide menu
+  // Show/Hide mobile menu
   let mobileMenuBtn = document.querySelector('.mobile_menu');
   let mobileMenuCover = document.querySelector('.mobile_cover');
 

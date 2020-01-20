@@ -42,9 +42,15 @@
             'menu_id' => 'head_menu',
             'menu_class' => 'flex mr-8'
           ]); ?>
-          <div>
-            <div class="order_btn modal_click_js text-sm uppercase" data-modal-id="modal_order">
+          <div class="flex items-center">
+            <div class="order_btn modal_click_js text-sm uppercase mr-8" data-modal-id="modal_order">
               <?php _e( 'Заказать просчет  ', 's-cast' ); ?>
+            </div>
+            <div class="flex">
+              <?php pll_the_languages(array(
+                'show_flags' => 1,
+                'show_names' => 0
+              )); ?>  
             </div>
           </div>
         </div>
@@ -101,10 +107,16 @@
         </div>
       <?php endforeach; ?>
       <div class="text-center">
-        <div class="order_btn inline-block text-sm uppercase modal_click_js" data-modal-id="modal_order">
+        <div class="order_btn inline-block text-sm uppercase mb-6 modal_click_js" data-modal-id="modal_order">
           <?php _e( 'Заказать просчет  ', 's-cast' ); ?>
+        </div>
+        <div class="flex justify-center">
+          <?php pll_the_languages(array(
+            'show_flags' => 1,
+            'show_names' => 0
+          )); ?>
         </div>
       </div>
     </div>
   </div>
-  <section id="content" role="main">
+  <section id="content" role="main" class="lg:pt-10">
