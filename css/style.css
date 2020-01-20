@@ -50586,7 +50586,7 @@ div.wpcf7 .ajax-loader {
 .mobile_cover {
   width: 100%;
   min-height: 100vh;
-  position: fixed;
+  position: absolute;
   z-index: 11;
   background-color: #05050F;
   -webkit-transform: translateX(-110%);

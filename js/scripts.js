@@ -44,10 +44,12 @@ function init() {
   // Show/Hide mobile menu
   let mobileMenuBtn = document.querySelector('.mobile_menu');
   let mobileMenuCover = document.querySelector('.mobile_cover');
+  let contentTagId = document.querySelector('#content');
 
   mobileMenuBtn.addEventListener('click', function(){
     mobileMenuBtn.classList.toggle('open');
     mobileMenuCover.classList.toggle('open');
+    contentTagId.classList.toggle('hidden');
   });
 
   //Adv Height

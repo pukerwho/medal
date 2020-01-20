@@ -87,7 +87,7 @@ Template Name: ГЛАВНАЯ
 								</div>
 							</div>
 							<div class="products_item_photo w-full lg:w-1/3" data-catalog-photo-animate="<?php echo $cat->term_id ?>">
-								<img src="<?php echo carbon_get_term_meta($cat->term_id, 'crb_term_photo') ?>" alt="" class="rounded-t-lg lg:rounded-lg w-full h-48 lg:h-full object-cover" loading="lazy">
+								<img src="<?php echo carbon_get_term_meta($cat->term_id, 'crb_term_photo') ?>" alt="" class="rounded-t-lg lg:rounded-lg w-full h-full object-cover" loading="lazy">
 							</div>
 						</div>
 					</div>
