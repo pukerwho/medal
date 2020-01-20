@@ -45,11 +45,15 @@ function init() {
   let mobileMenuBtn = document.querySelector('.mobile_menu');
   let mobileMenuCover = document.querySelector('.mobile_cover');
   let contentTagId = document.querySelector('#content');
-
+  let footerTag = document.querySelector('footer');
   mobileMenuBtn.addEventListener('click', function(){
     mobileMenuBtn.classList.toggle('open');
     mobileMenuCover.classList.toggle('open');
-    contentTagId.classList.toggle('hidden');
+    function mobileOpenHideContent() {
+      contentTagId.classList.toggle('hidden');
+      footerTag.classList.toggle('hidden')
+    }
+    setTimeout(mobileOpenHideContent(), 2000);
   });
 
   //Adv Height

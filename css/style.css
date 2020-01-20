@@ -50495,6 +50495,11 @@ div.wpcf7 .ajax-loader {
   -ms-transform: translateY(100%);
   transform: translateY(100%); }
 
+#content {
+  -webkit-transition: visibility 0.1s;
+  -o-transition: visibility 0.1s;
+  transition: visibility 0.1s; }
+
 .order_btn {
   border: 1px solid #e4b96c;
   -webkit-border-radius: 1rem;
