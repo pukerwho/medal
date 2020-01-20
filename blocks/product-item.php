@@ -1,4 +1,4 @@
-<div class="w-full lg:w-1/3 px-4 mb-4">
+<div class="w-full lg:w-1/3 px-4 mb-8">
 	<a href="<?php echo get_the_permalink(); ?>">
 		<div class="product">
 			<div class="product_img rounded-t-lg mb-2">

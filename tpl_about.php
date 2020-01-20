@@ -22,7 +22,7 @@ Template Name: О НАС
 			<div class="w-full lg:w-1/2">
 				<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="h-full object-cover" loading="lazy">
 			</div>
-			<div class="w-full lg:w-1/2 px-12 py-8">
+			<div class="w-full lg:w-1/2 p-6 lg:px-12 lg:py-8">
 				<h1 class="title roboto-bold text-4xl uppercase mb-6">
 					<?php the_title(); ?>	
 				</h1>
