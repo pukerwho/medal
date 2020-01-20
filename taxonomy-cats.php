@@ -77,7 +77,7 @@
 	<?php endif; ?>
 
 	<h2 class="text-2xl mb-4">
-		Примеры работ
+		<?php _e('Примеры работ', 's-cast'); ?>
 	</h2>
 	<!-- Список продуктов -->
 	<div class="flex flex-wrap flex-col lg:flex-row -mx-4">

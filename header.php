@@ -44,7 +44,7 @@
           ]); ?>
           <div class="flex items-center">
             <div class="order_btn modal_click_js text-sm uppercase mr-8" data-modal-id="modal_order">
-              <?php _e( 'Заказать просчет  ', 's-cast' ); ?>
+              <?php _e( 'Заказать просчет', 's-cast' ); ?>
             </div>
             <div class="flex">
               <?php pll_the_languages(array(
