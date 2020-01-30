@@ -50516,15 +50516,57 @@ div.wpcf7 .ajax-loader {
   cursor: pointer;
   padding: 0.5rem 1rem; }
 
-.header_bottom {
+.header {
   width: 100%;
   position: absolute;
   z-index: 12; }
-  .header_bottom_fixed {
+  .header_fixed {
     position: fixed;
     top: 0;
     -webkit-animation: header_fixed 0.65s;
     animation: header_fixed 0.65s; }
+  .header_phones {
+    position: relative; }
+    .header_phones:hover .header_phones_block {
+      display: block; }
+    .header_phones > a {
+      position: relative; }
+      .header_phones > a:after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        right: -13px;
+        top: 50%;
+        background: url("../img/down.svg");
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
+    .header_phones_block {
+      display: none;
+      position: absolute;
+      top: 0;
+      z-index: 2; }
+      .header_phones_block:after {
+        content: '';
+        width: -webkit-calc(100% + 1.8rem);
+        width: calc(100% + 1.8rem);
+        height: -webkit-calc(100% + 1.8rem);
+        height: calc(100% + 1.8rem);
+        position: absolute;
+        left: -0.9rem;
+        top: -0.9rem;
+        background: #1a202c;
+        background: -o-linear-gradient(330deg, #1a202c 0%, #05050f 70%);
+        background: linear-gradient(120deg, #1a202c 0%, #05050f 70%);
+        -webkit-border-radius: 0.5rem;
+        border-radius: 0.5rem; }
+      .header_phones_block a {
+        position: relative;
+        z-index: 2; }
+        .header_phones_block a:first-of-type {
+          display: inline-block;
+          margin-bottom: 0.35rem; }
 
 #head_menu {
   display: -webkit-box;

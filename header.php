@@ -42,10 +42,36 @@
             'menu_id' => 'head_menu',
             'menu_class' => 'flex mr-8'
           ]); ?>
-          <div class="flex items-center">
-            <div class="order_btn modal_click_js text-sm uppercase mr-8" data-modal-id="modal_order">
+          <div class="flex flex-col items-center mr-8">
+            <?php $args_contact_page = [
+              'post_type' => 'page',
+              'fields' => 'ids',
+              'nopaging' => true,
+              'meta_key' => '_wp_page_template',
+              'meta_value' => 'tpl_contact.php'
+            ];
+            $contact_pages = get_posts( $args_contact_page );
+            foreach ( $contact_pages as $contact_page ): ?>
+              <div class="header_phones">
+                <?php $header_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
+                foreach (array_slice($header_phones, 0, 1) as $header_phone): ?>
+                  <a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>">
+                    <?php echo $header_phone['crb_contact_phone'] ?>
+                  </a>
+                <?php endforeach; ?>
+                <div class="header_phones_block">
+                  <?php foreach ($header_phones as $header_phone): ?>
+                    <a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>">
+                      <?php echo $header_phone['crb_contact_phone'] ?>
+                    </a>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+            <?php endforeach; ?>  
+          </div>
+            <!-- <div class="order_btn modal_click_js text-sm uppercase mr-8" data-modal-id="modal_order">
               <?php _e( 'Заказать просчет', 's-cast' ); ?>
-            </div>
+            </div> -->
             <div class="flex">
               <?php pll_the_languages(array(
                 'show_flags' => 1,
@@ -119,4 +145,4 @@
       </div>
     </div>
   </div>
-  <section id="content" role="main" class="lg:pt-10">
+  <section id="content" role="main" class="lg:pt-24">

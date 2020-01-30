@@ -43,8 +43,6 @@ Template Name: ГЛАВНАЯ
 	</div>
 </section>
 
-<?php get_template_part('blocks/adv', 's-cast') ?>
-
 <section id="products">
 	<div class="products mb-12 lg:mb-20">
 		<div class="container mx-auto px-4 lg:px-0">
@@ -96,6 +94,8 @@ Template Name: ГЛАВНАЯ
 		</div>
 	</div>
 </section>
+
+<?php get_template_part('blocks/adv', 's-cast') ?>
 
 <section id="about">
 	<div class="about mb-12 lg:mb-20">

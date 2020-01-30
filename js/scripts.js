@@ -11,13 +11,13 @@ function init() {
     },
   });
 
-  let headerBottom = document.querySelector('.header_bottom');
+  let headerClass = document.querySelector('.header');
 
   function fixedHeader(currentScroll) {
     if (currentScroll > 110) {
-      headerBottom.classList.add('header_bottom_fixed');
+      headerClass.classList.add('header_fixed');
     } else {
-      headerBottom.classList.remove('header_bottom_fixed');
+      headerClass.classList.remove('header_fixed');
     }
   }
 
