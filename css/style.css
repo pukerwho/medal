@@ -50525,6 +50525,8 @@ div.wpcf7 .ajax-loader {
     top: 0;
     -webkit-animation: header_fixed 0.65s;
     animation: header_fixed 0.65s; }
+  .header_top li:before {
+    content: none; }
   .header_phones {
     position: relative; }
     .header_phones:hover .header_phones_block {

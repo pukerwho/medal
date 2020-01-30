@@ -42,16 +42,16 @@
             'menu_id' => 'head_menu',
             'menu_class' => 'flex mr-8'
           ]); ?>
-          <div class="flex flex-col items-center mr-8">
-            <?php $args_contact_page = [
-              'post_type' => 'page',
-              'fields' => 'ids',
-              'nopaging' => true,
-              'meta_key' => '_wp_page_template',
-              'meta_value' => 'tpl_contact.php'
-            ];
-            $contact_pages = get_posts( $args_contact_page );
-            foreach ( $contact_pages as $contact_page ): ?>
+          <?php $args_contact_page = [
+            'post_type' => 'page',
+            'fields' => 'ids',
+            'nopaging' => true,
+            'meta_key' => '_wp_page_template',
+            'meta_value' => 'tpl_contact.php'
+          ];
+          $contact_pages = get_posts( $args_contact_page );
+          foreach ( $contact_pages as $contact_page ): ?>
+            <div class="flex flex-col items-center mr-8">
               <div class="header_phones">
                 <?php $header_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
                 foreach (array_slice($header_phones, 0, 1) as $header_phone): ?>
@@ -67,11 +67,35 @@
                   <?php endforeach; ?>
                 </div>
               </div>
-            <?php endforeach; ?>  
-          </div>
+            </div>
+            <div class="flex mr-8">
+              <?php if (carbon_get_post_meta($contact_page, 'crb_contact_instagram')): ?>
+                <li class="list-none">
+                  <a href="<?php echo carbon_get_post_meta($contact_page, 'crb_contact_instagram'); ?>" target="_blank">
+                    <img src="<?php bloginfo('template_url'); ?>/img/instagram.svg" alt="" width="32px" height="32px" class="social_icon" loading="lazy">
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if (carbon_get_post_meta($contact_page, 'crb_contact_pinterest')): ?>
+                <li class="list-none">
+                  <a href="<?php echo carbon_get_post_meta($contact_page, 'crb_contact_pinterest'); ?>" target="_blank">
+                    <img src="<?php bloginfo('template_url'); ?>/img/pinterest.svg" alt="" width="32px" height="32px" class="social_icon" loading="lazy">
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if (carbon_get_post_meta($contact_page, 'crb_contact_facebook')): ?>
+                <li class="list-none">
+                  <a href="<?php echo carbon_get_post_meta($contact_page, 'crb_contact_facebook'); ?>" target="_blank">
+                    <img src="<?php bloginfo('template_url'); ?>/img/facebook.svg" alt="" width="32px" height="32px" class="social_icon" loading="lazy">
+                  </a>
+                </li>
+              <?php endif; ?>
+            </div>
+          <?php endforeach; ?>  
             <!-- <div class="order_btn modal_click_js text-sm uppercase mr-8" data-modal-id="modal_order">
               <?php _e( 'Заказать просчет', 's-cast' ); ?>
             </div> -->
+            
             <div class="flex">
               <?php pll_the_languages(array(
                 'show_flags' => 1,
