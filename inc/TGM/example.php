@@ -80,6 +80,15 @@ function estate_register_required_plugins() {
 		),
 
 		array(
+			'name'               => 'Custom taxonomy order', // The plugin name.
+			'slug'               => 'custom-taxonomy-order', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/lib/plugins/custom-taxonomy-order.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+		),
+
+		array(
 			'name'               => 'Cyr 2 Lat', // The plugin name.
 			'slug'               => 'cyr2lat', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/lib/plugins/cyr2lat.zip', // The plugin source.
