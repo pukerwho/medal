@@ -44023,10 +44023,10 @@ li {
     .large-font {
       font-size: 36px; } }
 
-.archive #content, .page-template #content {
+.archive #content, .page-template #content, .page-template-default #content {
   padding-top: 180px; }
   @media (max-width: 970px) {
-    .archive #content, .page-template #content {
+    .archive #content, .page-template #content, .page-template-default #content {
       padding-top: 105px; } }
 
 .page-template-tpl_main #content {
