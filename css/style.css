@@ -44172,6 +44172,7 @@ li {
       @media (max-width: 970px) {
         .header_bottom .menu-humburger {
           width: 25px;
+          height: 25px;
           display: block;
           position: relative; }
           .header_bottom .menu-humburger span {
@@ -45104,6 +45105,8 @@ div.wpcf7 .ajax-loader {
 .mobile_cover {
   width: 100%;
   min-height: 100vh;
+  min-height: -webkit-calc(100vh + 1px);
+  min-height: calc(100vh + 1px);
   position: absolute;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.9);
@@ -45127,7 +45130,7 @@ div.wpcf7 .ajax-loader {
     width: -webkit-calc(100% - 20px);
     width: calc(100% - 20px);
     position: absolute;
-    bottom: 25px;
+    bottom: 15px;
     left: 0; }
     .mobile_cover_bottom li a {
       margin-right: 20px; }
