@@ -9,6 +9,7 @@ function crb_term_options() {
     ->where( 'term_taxonomy', '=', 'cats' )
     ->add_fields( array(
     	Field::make( 'text', 'crb_term_title', 'Заголовок для страницы' ),
+    	Field::make( 'text', 'crb_term_desc', 'Короткое описание' ),
     	Field::make( 'image', 'crb_term_photo', 'Заглавная картинка' )->set_value_type( 'url'),
     	Field::make( 'text', 'crb_term_titletext', 'Заголовок для текста' ),
     	Field::make( 'rich_text', 'crb_term_seotext', 'Текст' ),
