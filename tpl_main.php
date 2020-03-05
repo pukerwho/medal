@@ -7,35 +7,30 @@ Template Name: ГЛАВНАЯ
 <?php get_header(); ?>
 
 <section id="hero">
-	<div class="hero py-12 lg:py-20">
-		<div class="container mx-auto px-4 lg:px-0">
-			<div class="slider flex flex-col lg:flex-row items-center cast-animate">
-				<div class="w-full lg:w-1/2 mb-8 lg:pr-12 lg:mb-0">
-					<div class="slider_subtitle text-xl opacity-75 cast-animate mb-4">
-						<?php _e( 'Индивидуальный дизайн', 's-cast' ); ?>
-					</div>
-					<h1 class="slider_title roboto-bold text-2xl lg:text-4xl uppercase cast-animate mb-6">
-						<?php echo carbon_get_the_post_meta('crb_main_title') ?>
-					</h1>
-					<div class="slider_text cast-animate mb-6 pl-4">
-						<?php echo carbon_get_the_post_meta('crb_main_description') ?>
-					</div>
-					<div class="slider_btn text-xl inline-block modal_click_js cursor-pointer cast-animate" data-modal-id="modal_callback">
-						<i class="icofont-arrow-right"></i>
-						<span><?php _e( 'Заказать звонок', 's-cast' ); ?></span>
-					</div>
-				</div>
-				<div class="w-full lg:w-1/2 lg:pl-12">
-					<div class="swiper-container swiper-slider-container">
-						<div class="slider_photo swiper-wrapper">
-							<?php $slider_items = carbon_get_the_post_meta('crb_main_slider');
-								foreach ( $slider_items as $slider_item ): ?>
-								<?php $item_src = wp_get_attachment_image_src($slider_item, 'large'); ?>
-								<div class="swiper-slide">
-									<img src="<?php echo $item_src[0]; ?>" alt="" loading="lazy">	
+	<div class="hero">
+		<div class="slider">
+			<div class="swiper-container swiper-slider-container">
+				<div class="swiper-wrapper">
+					<?php $slider_items = carbon_get_the_post_meta('crb_hero_slide');
+					foreach ( $slider_items as $slider_item ): ?>
+						<?php $item_src = wp_get_attachment_image_src($slider_item, 'large'); ?>
+						<div class="swiper-slide">
+							<div class="slide">
+								<div class="slide_img">
+									<img src="<?php echo $slider_item['crb_hero_slide_img']; ?>" alt="">
 								</div>
-							<?php endforeach; ?>
-						</div>	
+								<div class="container mx-auto px-4 lg:px-0">
+									<div class="slide_title large-font">
+										<?php echo $slider_item['crb_hero_slide_title']; ?>
+									</div>
+								</div>
+							</div>
+						</div>
+					<?php endforeach; ?>
+				</div>
+				<div class="container mx-auto px-4 lg:px-0">
+					<div class="slider_pagination">
+						<div class="swiper-pagination-hero swiper-pagination"></div>		
 					</div>
 				</div>
 			</div>
@@ -44,107 +39,139 @@ Template Name: ГЛАВНАЯ
 </section>
 
 <section id="products">
-	<div class="products mb-12 lg:mb-20">
-		<div class="container mx-auto px-4 lg:px-0">
-			<div class="title_bg_2 mb-12">
-				<h2 class="products_title roboto-bold text-4xl uppercase cast-animate mb-2">
-					<?php _e( 'Продукция', 's-cast' ); ?>
-				</h2>
-				<div class="products_subtitle roboto-light text-2xl cast-animate">
-					<?php _e( 'Производство изделий по индивидуальному дизайну', 's-cast' ); ?>
-				</div>
-			</div>
-			<div class="products_blocks">
-				<?php $cats = get_terms( array( 'taxonomy' => 'cats', 'parent' => 0, 'hide_empty' => false ) );
+	<div class="products">
+		<div class="slider">
+			<div class="swiper-container swiper-product-container" style="padding: 0 70px;">
+				<div class="container swiper-wrapper mx-auto">
+					<?php $cats = get_terms( array( 'taxonomy' => 'cats', 'parent' => 0, 'hide_empty' => false ) );
 					foreach ( $cats as $cat ): ?>
-					<div class="products_item cast-animate mb-6">
-						<div class="products_item_bg flex flex-col-reverse lg:flex-row">
-							<div class="products_item_info w-full lg:w-2/3 flex flex-col justify-center rounded-b-lg lg:rounded-lg p-6">
-								<div class="logo flex items-center mx-0 mb-6">
-				          <div class="logo_left my_bg_gray">
-				            <span class="logo_site my_yellow_color">S-cast</span>
-				            <span class="logo_sep"> | </span>  
-				          </div>
-				          <div class="logo_right animate_this">
-				            <span class="logo_text"><?php _e( 'Закажи шедевр', 's-cast' ); ?></span>  
-				          </div>
-				        </div>
-								<div class="products_item_title my_yellow_color roboto-bold text-3xl uppercase mb-6 catalog_animate_btn-js">
-									<a href="<?php echo get_term_link($cat->term_id, 'cats') ?>" data-catalog-btn-animate="<?php echo $cat->term_id ?>">
-										<?php echo $cat->name ?>		
-									</a>
-								</div>
-								<div class="products_item_text roboto-light text-xl lg:pr-32 mb-6">
-									<?php echo carbon_get_term_meta($cat->term_id, 'crb_term_desc') ?>
-								</div>
-								<div class="slider_btn text-xl inline-block catalog_animate_btn-js">
-									<a href="<?php echo get_term_link($cat->term_id, 'cats') ?>" data-catalog-btn-animate="<?php echo $cat->term_id ?>">
-										<i class="icofont-arrow-right"></i>
-										<span><?php _e( 'Смотреть каталог', 's-cast' ); ?></span>
-									</a>
-								</div>
-							</div>
-							<div class="products_item_photo w-full lg:w-1/3" data-catalog-photo-animate="<?php echo $cat->term_id ?>">
-								<img src="<?php echo carbon_get_term_meta($cat->term_id, 'crb_term_photo') ?>" alt="" class="rounded-t-lg lg:rounded-lg w-full h-full object-cover" loading="lazy">
+						<div class="swiper-slide">
+							<div class="slide">
+								<a href="<?php echo get_term_link($cat->term_id, 'cats') ?>">
+									<div class="slide_img">
+										<img src="<?php echo carbon_get_term_meta($cat->term_id, 'crb_term_photo') ?>" alt="<?php echo $cat->name ?>	">
+									</div>
+									<div class="slide_info">
+										<div class="slide_title uppercase">
+											<?php echo $cat->name ?>	
+										</div>
+										<div class="slide_description">
+											<?php echo carbon_get_term_meta($cat->term_id, 'crb_term_desc') ?>
+										</div>	
+										<div class="slide_more uppercase">
+											<?php _e('Подробнее', 's-cast'); ?>
+										</div>
+									</div>	
+								</a>
 							</div>
 						</div>
-					</div>
-				<?php endforeach; ?>
+					<?php endforeach; ?>
+				</div>
+				<div class="swiper-product-prev"></div>
+				<div class="swiper-product-next"></div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<?php get_template_part('blocks/adv', 's-cast') ?>
-
-<section id="about">
-	<div class="about mb-12 lg:mb-20">
-		<?php $args_about_page = [
-      'post_type' => 'page',
-      'fields' => 'ids',
-      'nopaging' => true,
-      'meta_key' => '_wp_page_template',
-      'meta_value' => 'tpl_about.php'
-    ];
-    $about_pages = get_posts( $args_about_page );
-    foreach ( $about_pages as $about_page ): ?>
-			<div class="about_photo cast-animate lg:pr-6">
-				<img src="<?php echo get_the_post_thumbnail_url( $about_page ); ?>" alt="" loading="lazy" class="w-full h-full object-cover">
-			</div>
-			<div class="container mx-auto px-4 lg:px-0">
-				<div class="about_content cast-animate lg:pl-6">
-					<h2 class="about_title roboto-bold text-4xl uppercase mb-6">
-						<?php _e( 'О компании', 's-cast' ); ?>
-					</h2>
-					<div>
-						<?php echo carbon_get_post_meta($about_page, 'crb_about_mainpage_content'); ?>
-					</div>
-				</div>
-			</div>
-		<?php endforeach; ?>
-	</div>
-</section>
-
-<section id="clients">
-	<div class="clients mb-20">
+<section id="rules">
+	<div class="rules">
 		<div class="container mx-auto px-4 lg:px-0">
-			<h2 class="clients_title roboto-bold text-4xl text-center uppercase cast-animate mb-6">
-				<?php _e( 'Наши клиенты', 's-cast' ); ?>
+			<h2 class="with_line mb_90 sm_mb_45">
+				<?php _e('Наши правила', 's-cast'); ?>
 			</h2>
-			<div class="swiper-container swiper-container-clients">
-				<div class="swiper-wrapper">
-					<?php $clients_items = carbon_get_theme_option('crb_main_clients');
-					foreach ( $clients_items as $clients_item ): ?>
-					<?php $item_src = wp_get_attachment_image_src($clients_item, 'large'); ?>
-						<div class="swiper-slide">
-							<div class="bg-white rounded-lg shadow-lg p-6">
-								<img src="<?php echo $item_src[0]; ?>" alt="" class="mx-auto" loading="lazy">
+			<div class="flex flex-col lg:flex-row -mx-4">
+				<?php $args_main_page = [
+	        'post_type' => 'page',
+	        'fields' => 'ids',
+	        'nopaging' => true,
+	        'meta_key' => '_wp_page_template',
+	        'meta_value' => 'tpl_main.php'
+	    	];
+	    	$main_pages = get_posts( $args_main_page );
+	    	foreach ( $main_pages as $main_page ): ?>
+					<?php $advs = carbon_get_post_meta($main_page, 'crb_main_adv');
+					foreach ($advs as $adv): ?>
+						<div class="w-full lg:w-1/4 pb_90 sm_pb_45">
+							<div class="rules_item px-4">
+								<div class="rules_title">
+									<?php echo $adv['crb_main_adv_title'] ?>	
+								</div>
+								<div class="rules_description">
+									<?php echo $adv['crb_main_adv_text'] ?>
+								</div>
 							</div>
 						</div>
 					<?php endforeach; ?>
-				</div>
+				<?php endforeach; ?>		
 			</div>
-			<div class="swiper-pagination swiper-pagination-clients"></div>
+		</div>
+	</div>
+</section>
+
+<section id="about">
+	<?php $args_about_page = [
+    'post_type' => 'page',
+    'fields' => 'ids',
+    'nopaging' => true,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'tpl_about.php'
+  ];
+  $about_pages = get_posts( $args_about_page );
+  foreach ( $about_pages as $about_page ): ?>
+	<div class="about">
+		<div class="container mx-auto">
+			<h2 class="with_line">
+				<span class="hidden lg:block">
+					<?php _e('Производственная компания S-Cast', 's-cast'); ?>	
+				</span>
+				<span class="block lg:hidden">
+					<?php _e('О нас', 's-cast'); ?>	
+				</span>
+			</h2>
+		</div>
+		<div class="about_photo hidden lg:flex lg:pr-6">
+			<img src="<?php echo get_the_post_thumbnail_url( $about_page ); ?>" alt="" loading="lazy" class="w-full h-full object-cover">
+		</div>
+		<div class="container mx-auto px-4 lg:px-0">
+			<div class="about_content lg:pl-6">
+				<div class="mb-0 lg:mb-8">
+					<?php echo carbon_get_post_meta($about_page, 'crb_about_mainpage_content'); ?>
+				</div>
+				<div class="about_photo block lg:hidden mb-8">
+					<img src="<?php echo get_the_post_thumbnail_url( $about_page ); ?>" alt="" loading="lazy" class="w-full h-full object-cover">
+				</div>
+				<a href="<?php echo get_page_url('tpl_about') ?>">
+					<div class="about_more">
+						<?php _e('Подробнее', 's-cast'); ?>
+					</div>
+				</a>
+			</div>
+		</div>
+		<img src="<?php echo get_the_post_thumbnail_url( $about_page ); ?>" alt="" class="about_bg">
+	</div>
+	<?php endforeach; ?>
+</section>
+
+<section id="clients">
+	<div class="clients">
+		<div class="container mx-auto">
+			<h2 class="with_line">
+				<?php _e( 'Наши клиенты', 's-cast' ); ?>
+			</h2>
+		</div>
+		<div class="swiper-container swiper-container-clients">
+			<div class="swiper-wrapper">
+				<?php $clients_items = carbon_get_theme_option('crb_main_clients');
+				foreach ( $clients_items as $clients_item ): ?>
+				<?php $item_src = wp_get_attachment_image_src($clients_item, 'large'); ?>
+					<div class="swiper-slide">
+						<div>
+							<img src="<?php echo $item_src[0]; ?>" alt="" class="mx-auto" loading="lazy">
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
 		</div>
 	</div>
 </section>

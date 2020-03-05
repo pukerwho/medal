@@ -8,9 +8,10 @@ function crb_term_options() {
   Container::make( 'term_meta', 'Options' )
     ->where( 'term_taxonomy', '=', 'cats' )
     ->add_fields( array(
-    	Field::make( 'textarea', 'crb_term_desc', 'Короткое описание' ),
+    	Field::make( 'text', 'crb_term_title', 'Заголовок для страницы' ),
     	Field::make( 'image', 'crb_term_photo', 'Заглавная картинка' )->set_value_type( 'url'),
-    	Field::make( 'rich_text', 'crb_term_seotext', 'SEO-текст' ),
+    	Field::make( 'text', 'crb_term_titletext', 'Заголовок для текста' ),
+    	Field::make( 'rich_text', 'crb_term_seotext', 'Текст' ),
     ) );
 }
 

@@ -1,18 +1,12 @@
 <div class="w-full lg:w-1/3 px-4 mb-8">
 	<a href="<?php echo get_the_permalink(); ?>">
-		<div class="product">
-			<div class="product_img rounded-t-lg mb-2">
-				<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="h-56 w-full object-cover rounded-t-lg">
-			</div>
+		<div class="product" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>'); background-size: cover;">
 			<div class="product_info">
-				<div class="product_title text-xl mb-2">
+				<div class="product_info_title">
 					<?php the_title(); ?>	
 				</div>	
-				<div class="line-btn inline-block">
-					<a href="<?php echo get_the_permalink(); ?>">
-						<i class="icofont-arrow-right"></i>
-						<span><?php _e( 'Подробнее', 's-cast' ); ?></span>
-					</a>
+				<div class="product_info_btn">
+					<?php _e( 'Подробнее', 's-cast' ); ?>
 				</div>
 			</div>
 		</div>

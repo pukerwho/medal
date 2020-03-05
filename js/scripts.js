@@ -42,47 +42,26 @@ function init() {
   SliderPost();
   
   // Show/Hide mobile menu
-  let mobileMenuBtn = document.querySelector('.mobile_menu');
+  let mobileMenuBtn = document.querySelector('.menu-humburger');
   let mobileMenuCover = document.querySelector('.mobile_cover');
+  let bodyTag = document.querySelector('body');
   let contentTagId = document.querySelector('#content');
   let footerTag = document.querySelector('footer');
 
-  mobileMenuBtn.addEventListener('click', function(){
-    mobileMenuBtn.classList.toggle('open');
-    mobileMenuCover.classList.toggle('open');
-    function mobileOpenHideContent() {
-      contentTagId.classList.toggle('hidden');
-      footerTag.classList.toggle('hidden')
-    }
-    setTimeout(mobileOpenHideContent(), 2000);
-  });
-
-  //Adv Height
-  let advs = document.querySelectorAll('.desktop .adv_item .adv_item_bg');
-  let advsHeightArray = [];
-  if (advs) {
-    for (adv of advs) {
-      advHeight = adv.offsetHeight;
-      advsHeightArray.push(advHeight);
-    }  
-  }
-
-  let maxHeightAds = Math.max.apply(null, advsHeightArray);
-  function adsHeight() {
-    for (adv of advs) {
-      adv.style.minHeight = maxHeightAds + 'px';
-    }
-  }
-
-  if (advs) {
-    adsHeight();  
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', function(){
+      mobileMenuBtn.classList.toggle('open');
+      mobileMenuCover.classList.toggle('open');
+      bodyTag.classList.toggle('overflow-hidden');
+    });
   }
 
   //About photo height
   let aboutBlock = document.querySelector('.desktop .about');
+  let aboutBlockContent = document.querySelector('.desktop .about_content');
   let aboutPhoto = document.querySelector('.desktop .about_photo');
   if (aboutPhoto) {
-    aboutPhoto.style.height = aboutBlock.offsetHeight + 'px';
+    aboutPhoto.style.height = aboutBlockContent.offsetHeight + 'px';
   }
 
   //Click Order
@@ -148,7 +127,7 @@ function init() {
   var clientsDesktopSwiper = new Swiper ('.desktop .swiper-container-clients', {
     loop: true,
     autoplay: true,
-    slidesPerView: 4,
+    slidesPerView: 6,
     spaceBetween: 16,
 
     // If we need pagination
@@ -170,11 +149,73 @@ function init() {
   });
 
   //Slider swiper (main)
-  var sliderSwiper = new Swiper ('.swiper-slider-container', {
+  var sliderSwiper = new Swiper ('.desktop .swiper-slider-container', {
     loop: true,
     autoplay: true,
     slidesPerView: 1,
     effect: 'fade',
+    pagination: {
+      el: '.swiper-pagination-hero',
+    },
+  });
+
+  var sliderMobileSwiper = new Swiper ('.mobile .swiper-slider-container', {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    effect: 'fade',
+    pagination: {
+      el: '.swiper-pagination-hero',
+    },
+  });
+
+  //Slider Products 
+  var productSwiper = new Swiper ('.desktop .swiper-product-container', {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    
+    navigation: {
+      nextEl: '.swiper-product-next',
+      prevEl: '.swiper-product-prev',
+    },
+  });
+
+  var productMobileSwiper = new Swiper ('.mobile .swiper-product-container', {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    
+    navigation: {
+      nextEl: '.swiper-product-next',
+      prevEl: '.swiper-product-prev',
+    },
+  });
+
+  var singleProductSlider = new Swiper ('.desktop .swiper-single_product-container', {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    
+    navigation: {
+      nextEl: '.swiper-product-next',
+      prevEl: '.swiper-product-prev',
+    },
+  });
+
+  var singleOtherProductSlider = new Swiper ('.desktop .swiper-other_products-container', {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    
+    navigation: {
+      nextEl: '.swiper-product-next',
+      prevEl: '.swiper-product-prev',
+    },
   });
 }
 
@@ -191,3 +232,28 @@ function animateIt() {
 
 document.addEventListener("DOMContentLoaded", init);
 document.addEventListener("DOMContentLoaded", animateIt);
+document.addEventListener("DOMContentLoaded", function(){
+  //Adv Height
+  setTimeout(function(){
+    let advs = document.querySelectorAll('.desktop .products .swiper-slide .slide_description');
+    let advsHeightArray = [];
+    if (advs) {
+      for (adv of advs) {
+        advHeight = adv.offsetHeight;
+        console.log(advHeight);
+        advsHeightArray.push(advHeight);
+      }  
+    }
+
+    let maxHeightAds = Math.max.apply(null, advsHeightArray);
+    function adsHeight() {
+      for (adv of advs) {
+        adv.style.minHeight = maxHeightAds + 'px';
+      }
+    }
+
+    if (advs) {
+      adsHeight();  
+    }
+  }, 100);
+});

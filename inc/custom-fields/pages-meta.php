@@ -9,10 +9,12 @@ function crb_page_theme_options() {
     ->where( 'post_type', '=', 'page' )
     ->where( 'post_template', '=', 'tpl_main.php' )
     ->add_fields( array(
-      Field::make( 'textarea', 'crb_main_title', 'Основной заголовок' ),
       Field::make( 'textarea', 'crb_main_description', 'Описание услуг' ),
       Field::make( 'textarea', 'crb_main_proizvoditel', 'Информация о производителе' ),
-      Field::make( 'media_gallery', 'crb_main_slider', 'Картинки на первом экране' )->set_type( array( 'image' ) ),
+      Field::make( 'complex', 'crb_hero_slide', 'Слайдер' )->add_fields( array(
+        Field::make( 'image', 'crb_hero_slide_img', 'Картинка' )->set_value_type( 'url'),
+        Field::make( 'textarea', 'crb_hero_slide_title', 'Заголовок' ),
+      )),
       Field::make( 'complex', 'crb_main_adv', 'Наши преимущества' )
         ->add_fields( array(
           Field::make( 'image', 'crb_main_adv_icon', 'Иконка' )->set_value_type( 'url'),
