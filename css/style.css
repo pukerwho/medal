@@ -45120,7 +45120,7 @@ div.wpcf7 .ajax-loader {
   .mobile_cover a {
     color: #ffffff; }
   .mobile_cover_top {
-    margin-bottom: 60px; }
+    margin-bottom: 5px; }
   .mobile_cover_center {
     margin-bottom: 70px; }
   .mobile_cover_bottom {
@@ -45163,7 +45163,11 @@ div.wpcf7 .ajax-loader {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-right: -20px; }
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    padding: 0 1rem; }
     .mobile_cover #mobile_bottom_nav li {
       padding-left: 0; }
       .mobile_cover #mobile_bottom_nav li:before {
