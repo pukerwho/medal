@@ -1,51 +1,53 @@
     </section>
-    <footer id="footer" class="footer">
-      <div class="container mx-auto px-4 lg:px-0">
-        <h2 class="with_line"><?php _e('Ответим на все вопросы'); ?></h2>
-        <div class="flex justify-center">
-          <div class="flex w-full lg:w-5/6 flex-col lg:flex-row">
-            <div class="w-full lg:w-1/2 footer_form mb-16 pr-0 lg:pr-20 lg:mb-0">
-              <?php 
-                $form_contact = carbon_get_theme_option(
-              'crb_form_contact'); 
-                echo do_shortcode(''. $form_contact .'');
-              ?>
-            </div>
-            <?php $args_contact_page = [
-              'post_type' => 'page',
-              'fields' => 'ids',
-              'nopaging' => true,
-              'meta_key' => '_wp_page_template',
-              'meta_value' => 'tpl_contact.php'
-            ];
-            $contact_pages = get_posts( $args_contact_page );
-            foreach ( $contact_pages as $contact_page ): ?>
-              <div class="w-full lg:w-1/2 text-center lg:text-left footer_contacts pl-0 lg:pl-20">
-                <div class="footer_phones">
-                  <?php $footer_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
-                  foreach ($footer_phones as $footer_phone): ?>
-                    <div class="mb-2">
-                      <a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>"><?php echo $footer_phone['crb_contact_phone'] ?></a>
-                    </div>
-                  <?php endforeach; ?>
-                </div>
-                <div class="footer_emails">
-                  <?php $footer_emails = carbon_get_post_meta($contact_page, 'crb_contact_emails');
-                  foreach ($footer_emails as $footer_email): ?>
-                    <div>
-                      <a href="mailto:<?php echo $footer_email['crb_contact_email'] ?>"><?php echo $footer_email['crb_contact_email'] ?></a>
-                    </div>
-                  <?php endforeach; ?>
-                </div>
-                <div class="footer_address">
-                  <?php echo carbon_get_post_meta($contact_page, 'crb_contact_address'); ?>
-                </div>
+    <?php if( !is_page_template( 'tpl_contact.php' )): ?>
+      <footer id="footer" class="footer">
+        <div class="container mx-auto px-4 lg:px-0">
+          <h2 class="with_line"><?php _e('Ответим на все вопросы'); ?></h2>
+          <div class="flex justify-center">
+            <div class="flex w-full lg:w-5/6 flex-col lg:flex-row">
+              <div class="w-full lg:w-1/2 footer_form mb-16 pr-0 lg:pr-20 lg:mb-0">
+                <?php 
+                  $form_contact = carbon_get_theme_option(
+                'crb_form_contact'); 
+                  echo do_shortcode(''. $form_contact .'');
+                ?>
               </div>
-            <?php endforeach; ?>
+              <?php $args_contact_page = [
+                'post_type' => 'page',
+                'fields' => 'ids',
+                'nopaging' => true,
+                'meta_key' => '_wp_page_template',
+                'meta_value' => 'tpl_contact.php'
+              ];
+              $contact_pages = get_posts( $args_contact_page );
+              foreach ( $contact_pages as $contact_page ): ?>
+                <div class="w-full lg:w-1/2 text-center lg:text-left footer_contacts pl-0 lg:pl-20">
+                  <div class="footer_phones">
+                    <?php $footer_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
+                    foreach ($footer_phones as $footer_phone): ?>
+                      <div class="mb-2">
+                        <a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>"><?php echo $footer_phone['crb_contact_phone'] ?></a>
+                      </div>
+                    <?php endforeach; ?>
+                  </div>
+                  <div class="footer_emails">
+                    <?php $footer_emails = carbon_get_post_meta($contact_page, 'crb_contact_emails');
+                    foreach ($footer_emails as $footer_email): ?>
+                      <div>
+                        <a href="mailto:<?php echo $footer_email['crb_contact_email'] ?>"><?php echo $footer_email['crb_contact_email'] ?></a>
+                      </div>
+                    <?php endforeach; ?>
+                  </div>
+                  <div class="footer_address">
+                    <?php echo carbon_get_post_meta($contact_page, 'crb_contact_address'); ?>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    <?php endif; ?>
     <div class="copyright">
       <div class="container mx-auto text-center lg:text-left">
         © 2020. S-CAST.COM.UA  

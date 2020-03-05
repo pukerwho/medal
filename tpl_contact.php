@@ -7,7 +7,7 @@ Template Name: КОНТАКТЫ
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<div class="p_contact">
+	<div class="p_contact mb-12">
 		<div class="container mx-auto">
 			<h2 class="with_line">
 				<?php the_title(); ?>
