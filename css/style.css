@@ -45534,9 +45534,13 @@ div.wpcf7 .ajax-loader {
           background: url("../img/close.svg");
           background-size: contain;
           cursor: pointer; } }
-  @media (max-width: 970px) {
-    .modal_block {
-      margin: 0 1rem; } }
+  .modal_block {
+    background: url("../img/menu-bg.svg");
+    background-size: 400%;
+    background-position: 10%; }
+    @media (max-width: 970px) {
+      .modal_block {
+        margin: 0 1rem; } }
   .modal_bg {
     width: 100%;
     height: 100%;
@@ -45557,8 +45561,7 @@ div.wpcf7 .ajax-loader {
       transition: opacity 0.35s; }
   .modal input, .modal textarea {
     border: 2px solid #060b0d;
-    color: #060b0d;
-    background-color: #ffffff; }
+    color: #060b0d; }
   .modal ::-webkit-input-placeholder {
     /* Edge */
     color: #060b0d; }
@@ -45572,7 +45575,8 @@ div.wpcf7 .ajax-loader {
   .modal ::placeholder {
     color: #060b0d; }
   .modal input[type="submit"] {
-    padding: 3px 20px 0px 20px; }
+    padding: 3px 20px 0px 20px;
+    border: 2px solid #d1a461; }
 
 /* SWIPER */
 .swiper-pagination {
