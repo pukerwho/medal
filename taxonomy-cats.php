@@ -5,8 +5,9 @@
 		<h1 class="cats_title">
 			<?php echo carbon_get_term_meta( get_queried_object_id(), 'crb_term_title' ); ?>
 		</h1>
-		<div class="order-string mb-8"> 
-			<?php _e('Заказать просчет', 's-cast'); ?>
+		<div class="order-string flex items-center modal_click_js cursor-pointer mb-8" data-modal-id="modal_order"> 
+			<span class="mr-4 mt-1"><?php _e('Заказать просчет', 's-cast'); ?> </span>
+			<img src="<?php bloginfo('template_url'); ?>/img/secondary-arrow.svg" alt="" width="25px">
 		</div>
 
 		<!-- Список продуктов -->
