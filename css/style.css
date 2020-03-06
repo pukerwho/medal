@@ -45499,7 +45499,7 @@ div.wpcf7 .ajax-loader {
           width: 25px;
           height: 25px;
           position: absolute;
-          top: -2rem;
+          top: 0.5rem;
           right: 1.5rem;
           background: url("../img/close.svg");
           background-size: contain;
@@ -45525,7 +45525,7 @@ div.wpcf7 .ajax-loader {
       -webkit-transition: opacity 0.35s;
       -o-transition: opacity 0.35s;
       transition: opacity 0.35s; }
-  .modal input {
+  .modal input, .modal textarea {
     border: 2px solid #060b0d;
     color: #060b0d; }
   .modal ::-webkit-input-placeholder {
