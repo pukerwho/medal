@@ -44055,24 +44055,23 @@ li {
   height: 40px;
   position: absolute;
   top: 50%;
-  background: url("../img/arrow.png");
+  background: url("../img/slider-arrow.svg");
   background-size: contain;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 3; }
+  .swiper-product-prev:focus, .swiper-product-next:focus {
+    outline: none; }
 
 .swiper-product-prev {
-  left: 0;
-  -webkit-transform: translateY(-50%) rotate(90deg);
-  -ms-transform: translateY(-50%) rotate(90deg);
-  transform: translateY(-50%) rotate(90deg); }
+  left: 20px;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg); }
 
 .swiper-product-next {
-  right: 0;
-  -webkit-transform: translateY(-50%) rotate(-90deg);
-  -ms-transform: translateY(-50%) rotate(-90deg);
-  transform: translateY(-50%) rotate(-90deg); }
+  right: 20px; }
 
 .header {
   width: 100%;
