@@ -23,6 +23,11 @@
 						</div>
 					<?php endforeach; ?>
 				</div>
+				<div class="swiper-product-prev"></div>
+				<div class="swiper-product-next"></div>
+				<div class="slider_pagination">
+					<div class="swiper-pagination-hero swiper-pagination"></div>		
+				</div>
 			</div>
 		</div>
 		<div class="content">
@@ -50,8 +55,9 @@
 				</div>
 			</div>
 			<div class="w-full inline-flex justify-end px-4 lg:px-0">
-				<div class="content_btn">
-					<?php _e('Рассчитать заказ', 's-cast'); ?>
+				<div class="content_btn flex items-center modal_click_js cursor-pointer mb-8" data-modal-id="modal_innerorder">
+					<span class="mr-4"><?php _e('Рассчитать заказ', 's-cast'); ?></span>
+					<img src="<?php bloginfo('template_url'); ?>/img/order-arrow.svg" alt="" width="25px" class="-mt-1">
 				</div>
 			</div>
 		</div>

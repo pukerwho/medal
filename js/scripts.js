@@ -199,10 +199,13 @@ function init() {
     autoplay: true,
     slidesPerView: 1,
     spaceBetween: 0,
-    
+    effect: 'fade',
     navigation: {
       nextEl: '.swiper-product-next',
       prevEl: '.swiper-product-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination-hero',
     },
   });
 

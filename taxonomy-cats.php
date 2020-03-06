@@ -58,12 +58,10 @@
 				</div>
 				<div class="mb-0 lg:mb-8">
 					<?php echo apply_filters( 'the_content', carbon_get_term_meta( get_queried_object_id(), 'crb_term_seotext' ) ); ?>
+				</div>				
+				<div class="about_more modal_click_js cursor-pointer" data-modal-id="modal_order">
+					<?php _e('Заказать просчет', 's-cast'); ?>
 				</div>
-				<a href="<?php echo get_page_url('tpl_about') ?>">
-					<div class="about_more">
-						<?php _e('Заказать просчет', 's-cast'); ?>
-					</div>
-				</a>
 			</div>
 		</div>
 		<img src="<?php echo carbon_get_term_meta( get_queried_object_id(), 'crb_term_photo' ); ?>" alt="" class="about_bg">
