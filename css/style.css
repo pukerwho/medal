@@ -44046,6 +44046,31 @@ li {
   letter-spacing: 0.64px;
   text-transform: uppercase; }
 
+/* SWIPER */
+.swiper-product-prev, .swiper-product-next {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  background: url("../img/arrow.png");
+  background-size: contain;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 3; }
+
+.swiper-product-prev {
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg); }
+
+.swiper-product-next {
+  right: 0;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg); }
+
 .header {
   width: 100%;
   position: absolute;
@@ -44367,6 +44392,9 @@ li {
         -webkit-transform: translateY(-7.5px);
         -ms-transform: translateY(-7.5px);
         transform: translateY(-7.5px); }
+      @media (max-width: 970px) {
+        .products .slider .slide_more {
+          display: none; } }
     .products .slider .slide:hover .slide_more {
       visibility: visible;
       opacity: 1; }
@@ -44380,21 +44408,6 @@ li {
       color: #060b0d; }
     .products .slider .slide:hover .slide_info:before {
       opacity: 1; }
-  .products .slider .swiper-product-prev, .products .slider .swiper-product-next {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    background: url("../img/arrow.png");
-    background-size: contain;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    z-index: 3; }
-  .products .slider .swiper-product-prev {
-    left: 0; }
-  .products .slider .swiper-product-next {
-    right: 0; }
 
 .other_products_item {
   height: 270px;
@@ -45123,14 +45136,12 @@ div.wpcf7 .ajax-loader {
   .mobile_cover a {
     color: #ffffff; }
   .mobile_cover_top {
-    margin-bottom: 5px; }
-  .mobile_cover_center {
-    margin-bottom: 70px; }
+    margin-bottom: 10px; }
   .mobile_cover_bottom {
     width: -webkit-calc(100% - 20px);
     width: calc(100% - 20px);
     position: absolute;
-    bottom: 15px;
+    bottom: 25px;
     left: 0; }
     .mobile_cover_bottom li a {
       margin-right: 20px; }
@@ -45157,6 +45168,11 @@ div.wpcf7 .ajax-loader {
       font-family: "BebasNeueBold";
       font-size: 36px;
       line-height: 52px; }
+      @media (max-width: 970px) {
+        .mobile_cover #mobile_center_nav a {
+          font-family: "BebasNeueBook";
+          font-size: 32px;
+          line-height: 48px; } }
   .mobile_cover #mobile_bottom_nav {
     display: -webkit-box;
     display: -webkit-flex;
