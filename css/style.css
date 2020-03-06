@@ -45141,7 +45141,7 @@ div.wpcf7 .ajax-loader {
     width: -webkit-calc(100% - 20px);
     width: calc(100% - 20px);
     position: absolute;
-    bottom: 25px;
+    bottom: 50px;
     left: 0; }
     .mobile_cover_bottom li a {
       margin-right: 20px; }
@@ -45171,8 +45171,8 @@ div.wpcf7 .ajax-loader {
       @media (max-width: 970px) {
         .mobile_cover #mobile_center_nav a {
           font-family: "BebasNeueBook";
-          font-size: 32px;
-          line-height: 48px; } }
+          font-size: 28px;
+          line-height: 42px; } }
   .mobile_cover #mobile_bottom_nav {
     display: -webkit-box;
     display: -webkit-flex;
