@@ -44065,8 +44065,7 @@ li {
     outline: none; }
   .swiper-product-prev:hover, .swiper-product-next:hover {
     background: url("../img/slider-arrow-hover.svg");
-    background-size: contain;
-    opacity: 0; }
+    background-size: contain; }
 
 .swiper-product-prev {
   left: 20px;
@@ -44319,7 +44318,7 @@ li {
     height: 100%;
     position: absolute;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
     left: -webkit-calc(100% - 70px);
     left: calc(100% - 70px); }
@@ -44329,7 +44328,7 @@ li {
     height: 100%;
     position: absolute;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
     right: -webkit-calc(100% - 70px);
     right: calc(100% - 70px); }
