@@ -98,8 +98,8 @@
             <span></span>
           </div>
         </div>
-        <div class="order-btn secondary-bg">
-          Заказать просчет
+        <div class="order-btn secondary-bg modal_click_js cursor-pointer" data-modal-id="modal_order">
+          <span>Заказать просчет</span>
         </div>
       </div>
     </div>

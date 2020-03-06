@@ -44017,6 +44017,9 @@ li {
 .secondary-color {
   color: #d1a461; }
 
+.secondary-font {
+  font-family: "BebasNeueBook"; }
+
 .large-font {
   font-size: 52px; }
   @media (max-width: 970px) {
@@ -44178,6 +44181,9 @@ li {
       top: 0;
       font-size: 22px;
       padding: 0 55px; }
+      .header_bottom .order-btn span {
+        display: inline-block;
+        margin-top: 5px; }
       .header_bottom .order-btn:after {
         content: '';
         width: 22px;
@@ -44186,9 +44192,10 @@ li {
         position: absolute;
         top: 50%;
         right: 20px;
-        -webkit-transform: translateY(-51%);
-        -ms-transform: translateY(-51%);
-        transform: translateY(-51%); }
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin-top: 1px; }
       @media (max-width: 970px) {
         .header_bottom .order-btn {
           display: none; } }
