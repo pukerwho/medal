@@ -45525,6 +45525,23 @@ div.wpcf7 .ajax-loader {
       -webkit-transition: opacity 0.35s;
       -o-transition: opacity 0.35s;
       transition: opacity 0.35s; }
+  .modal input {
+    border: 2px solid #060b0d;
+    color: #060b0d; }
+  .modal ::-webkit-input-placeholder {
+    /* Edge */
+    color: #060b0d; }
+  .modal :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #060b0d; }
+  .modal ::-moz-placeholder {
+    color: #060b0d; }
+  .modal ::-ms-input-placeholder {
+    color: #060b0d; }
+  .modal ::placeholder {
+    color: #060b0d; }
+  .modal input[type="submit"] {
+    padding: 3px 20px 0px 20px; }
 
 /* SWIPER */
 .swiper-pagination {

@@ -56,7 +56,7 @@
     
     <div class="modal modal_order" data-modal-id="modal_order">
       <div class="close_btn"></div>
-    	<div class="modal_block secondary-bg">
+    	<div class="modal_block secondary-bg pb-12">
     		<div class="py-8 px-12">
     			<h3 class="secondary-font text-black text-3xl text-center uppercase mb-6"><?php _e( 'Заказать просчет', 's-cast' ); ?></h3>
     			<div>
