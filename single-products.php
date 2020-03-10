@@ -8,7 +8,7 @@
 	<div class="title">
 		<?php the_title(); ?>
 	</div>
-	<div class="flex flex-col lg:flex-row relative mb-24">
+	<div class="flex flex-col lg:flex-row relative mb-4 lg:mb-24">
 		<div class="slider px-4 lg:px-0">
 			<div class="swiper-container swiper-single_product-container">
 				<div class="swiper-wrapper">
@@ -55,7 +55,7 @@
 				</div>
 			</div>
 			<div class="w-full inline-flex justify-end px-4 lg:px-0">
-				<div class="content_btn flex items-center modal_click_js cursor-pointer mb-8" data-modal-id="modal_innerorder">
+				<div class="content_btn flex justify-center items-center modal_click_js cursor-pointer mb-8" data-modal-id="modal_innerorder">
 					<span class="mr-4"><?php _e('Рассчитать заказ', 's-cast'); ?></span>
 					<img src="<?php bloginfo('template_url'); ?>/img/order-arrow.svg" alt="" width="25px" class="-mt-1">
 				</div>
@@ -70,31 +70,31 @@
 	</h2>
 </div>
 <div class="mb-24">
-	<?php
-		$current_term = wp_get_post_terms(  get_the_ID() , 'cats', array() );
-		foreach ($current_term as $myterm); {
-			$current_term_slug = $myterm->slug;
-		}
-		$current_id = get_the_ID();
-		$custom_query = new WP_Query( array( 
-		'post_type' => 'products',
-		'post__not_in' => array($current_id),
-		'orderby' => 'date',
-		'order' => 'DESC',
-		'tax_query' => array(
-	    array(
-        'taxonomy' => 'cats',
-		    'terms' => $current_term_slug,
-		    'post__not_in' => array($current_id),
-        'field' => 'slug',
-        'include_children' => true,
-        'operator' => 'IN'
-	    )
-		),
-	));
-	if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-		<div class="swiper-container swiper-other_products-container other_products" style="padding: 0 70px;">
-			<div class="container swiper-wrapper mx-auto">
+	<div class="swiper-container swiper-other_products-container other_products" style="padding: 0 70px;">
+		<div class="container swiper-wrapper mx-auto">
+			<?php
+				$current_term = wp_get_post_terms(  get_the_ID() , 'cats', array() );
+				foreach ($current_term as $myterm); {
+					$current_term_slug = $myterm->slug;
+				}
+				$current_id = get_the_ID();
+				$custom_query = new WP_Query( array( 
+				'post_type' => 'products',
+				'post__not_in' => array($current_id),
+				'orderby' => 'date',
+				'order' => 'DESC',
+				'tax_query' => array(
+			    array(
+		        'taxonomy' => 'cats',
+				    'terms' => $current_term_slug,
+				    'post__not_in' => array($current_id),
+		        'field' => 'slug',
+		        'include_children' => true,
+		        'operator' => 'IN'
+			    )
+				),
+			));
+			if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 				<div class="swiper-slide">
 					<a href="<?php the_permalink(); ?>">
 						<div class="other_products_item" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>'); background-size: cover;">
@@ -109,9 +109,11 @@
 						</div>
 					</a>
 				</div>
-			</div>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
-	<?php endwhile; endif; wp_reset_postdata(); ?>
+		<div class="swiper-product-prev"></div>
+		<div class="swiper-product-next"></div>
+	</div>
 </div>
 
 <?php endwhile; else: ?>

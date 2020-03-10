@@ -41,7 +41,7 @@ Template Name: ГЛАВНАЯ
 <section id="products">
 	<div class="products">
 		<div class="slider">
-			<div class="swiper-container swiper-product-container" style="padding: 0 70px;">
+			<div class="swiper-container swiper-product-container">
 				<div class="container swiper-wrapper mx-auto">
 					<?php $cats = get_terms( array( 'taxonomy' => 'cats', 'parent' => 0, 'hide_empty' => false ) );
 					foreach ( $cats as $cat ): ?>
@@ -142,8 +142,9 @@ Template Name: ГЛАВНАЯ
 					<img src="<?php echo get_the_post_thumbnail_url( $about_page ); ?>" alt="" loading="lazy" class="w-full h-full object-cover">
 				</div>
 				<a href="<?php echo get_page_url('tpl_about') ?>">
-					<div class="about_more">
-						<?php _e('Подробнее', 's-cast'); ?>
+					<div class="about_more flex items-center">
+						<span class="mr-4 mt-1"><?php _e('Подробнее', 's-cast'); ?> </span>
+						<img src="<?php bloginfo('template_url'); ?>/img/secondary-arrow.svg" alt="" width="25px">
 					</div>
 				</a>
 			</div>

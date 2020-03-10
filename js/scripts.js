@@ -209,10 +209,37 @@ function init() {
     },
   });
 
+  var singleProductMobileSlider = new Swiper ('.mobile .swiper-single_product-container', {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    effect: 'fade',
+    navigation: {
+      nextEl: '.swiper-product-next',
+      prevEl: '.swiper-product-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination-hero',
+    },
+  });
+
   var singleOtherProductSlider = new Swiper ('.desktop .swiper-other_products-container', {
     loop: true,
     autoplay: true,
     slidesPerView: 4,
+    spaceBetween: 30,
+    
+    navigation: {
+      nextEl: '.swiper-product-next',
+      prevEl: '.swiper-product-prev',
+    },
+  });
+
+  var singleOtherProductMobileSlider = new Swiper ('.mobile .swiper-other_products-container', {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
     spaceBetween: 30,
     
     navigation: {

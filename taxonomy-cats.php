@@ -56,11 +56,12 @@
 				<div class="about_photo block lg:hidden mb-8">
 					<img src="<?php echo carbon_get_term_meta( get_queried_object_id(), 'crb_term_photo' ); ?>" alt="" loading="lazy" class="w-full h-full object-cover">
 				</div>
-				<div class="mb-0 lg:mb-8">
+				<div class="mb-8">
 					<?php echo apply_filters( 'the_content', carbon_get_term_meta( get_queried_object_id(), 'crb_term_seotext' ) ); ?>
 				</div>				
-				<div class="about_more modal_click_js cursor-pointer" data-modal-id="modal_order">
-					<?php _e('Заказать просчет', 's-cast'); ?>
+				<div class="about_more flex justify-center lg:justify-end items-center modal_click_js cursor-pointer" data-modal-id="modal_order">
+					<span class="mr-4 mt-1"><?php _e('Заказать просчет', 's-cast'); ?> </span>
+					<img src="<?php bloginfo('template_url'); ?>/img/secondary-arrow.svg" alt="" width="25px">
 				</div>
 			</div>
 		</div>

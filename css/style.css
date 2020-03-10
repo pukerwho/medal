@@ -43967,20 +43967,18 @@ p {
 
 ul li {
   position: relative;
-  padding-left: 10px; }
+  padding-left: 10px;
+  margin-bottom: 10px; }
   ul li:before {
     content: '';
     width: 5px;
     height: 5px;
     position: absolute;
-    top: 50%;
+    top: 12px;
     left: 0;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    background-color: #d1a461;
-    -webkit-transform: translateY(-2.5px);
-    -ms-transform: translateY(-2.5px);
-    transform: translateY(-2.5px); }
+    background-color: #d1a461; }
 
 li {
   list-style-type: none; }
@@ -44317,26 +44315,45 @@ li {
 .products {
   margin-top: -100px;
   padding-bottom: 90px; }
-  .products .slider .swiper-product-container:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2;
-    left: -webkit-calc(100% - 70px);
-    left: calc(100% - 70px); }
-  .products .slider .swiper-product-container:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2;
-    right: -webkit-calc(100% - 70px);
-    right: calc(100% - 70px); }
+  .products .slider .swiper-product-container {
+    padding: 0 70px; }
+    .products .slider .swiper-product-container:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 2;
+      left: -webkit-calc(100% - 70px);
+      left: calc(100% - 70px); }
+      @media (max-width: 970px) {
+        .products .slider .swiper-product-container:after {
+          left: -webkit-calc(100% - 40px);
+          left: calc(100% - 40px); } }
+    .products .slider .swiper-product-container:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 2;
+      right: -webkit-calc(100% - 70px);
+      right: calc(100% - 70px); }
+      @media (max-width: 970px) {
+        .products .slider .swiper-product-container:before {
+          right: -webkit-calc(100% - 40px);
+          right: calc(100% - 40px); } }
+  @media (max-width: 970px) {
+    .products .slider .swiper-slide-active .slide_img img {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+      opacity: 1; }
+    .products .slider .swiper-slide-active .slide_title {
+      color: #d1a461; }
+    .products .slider .swiper-slide-active .slide_info:before {
+      opacity: 1; } }
   .products .slider .slide {
     background-color: #1d2326; }
     .products .slider .slide_info {
@@ -44508,6 +44525,38 @@ li {
     opacity: 1;
     visibility: visible; }
 
+/* IN OTHER PRODUCT */
+.swiper-other_products-container {
+  padding: 0 70px; }
+  .swiper-other_products-container:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    left: -webkit-calc(100% - 70px);
+    left: calc(100% - 70px); }
+    @media (max-width: 970px) {
+      .swiper-other_products-container:after {
+        left: -webkit-calc(100% - 40px);
+        left: calc(100% - 40px); } }
+  .swiper-other_products-container:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    right: -webkit-calc(100% - 70px);
+    right: calc(100% - 70px); }
+    @media (max-width: 970px) {
+      .swiper-other_products-container:before {
+        right: -webkit-calc(100% - 40px);
+        right: calc(100% - 40px); } }
+
 .rules_title {
   font-family: "BebasNeueBook";
   font-size: 32px;
@@ -44676,17 +44725,6 @@ li {
     text-transform: uppercase;
     text-align: right;
     padding-right: 30px; }
-    .about_more:after {
-      content: '';
-      width: 22px;
-      height: 13px;
-      background: url("../img/secondary-arrow.svg");
-      position: absolute;
-      top: 50%;
-      right: 2px;
-      -webkit-transform: translateY(-8.2px);
-      -ms-transform: translateY(-8.2px);
-      transform: translateY(-8.2px); }
 
 .p_about {
   margin-bottom: 50px; }
@@ -45173,12 +45211,12 @@ div.wpcf7 .ajax-loader {
   .mobile_cover a {
     color: #ffffff; }
   .mobile_cover_top {
-    margin-bottom: 10px; }
+    margin-bottom: 20px; }
   .mobile_cover_bottom {
     width: -webkit-calc(100% - 20px);
     width: calc(100% - 20px);
     position: absolute;
-    bottom: 50px;
+    bottom: 60px;
     left: 0; }
     .mobile_cover_bottom li a {
       margin-right: 20px; }
