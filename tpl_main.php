@@ -142,7 +142,7 @@ Template Name: ГЛАВНАЯ
 					<img src="<?php echo get_the_post_thumbnail_url( $about_page ); ?>" alt="" loading="lazy" class="w-full h-full object-cover">
 				</div>
 				<a href="<?php echo get_page_url('tpl_about') ?>">
-					<div class="about_more flex items-center">
+					<div class="about_more flex items-center justify-end">
 						<span class="mr-4 mt-1"><?php _e('Подробнее', 's-cast'); ?> </span>
 						<img src="<?php bloginfo('template_url'); ?>/img/secondary-arrow.svg" alt="" width="25px">
 					</div>
@@ -162,7 +162,7 @@ Template Name: ГЛАВНАЯ
 			</h2>
 		</div>
 		<div class="swiper-container swiper-container-clients">
-			<div class="swiper-wrapper">
+			<div class="container swiper-wrapper mx-auto">
 				<?php $clients_items = carbon_get_theme_option('crb_main_clients');
 				foreach ( $clients_items as $clients_item ): ?>
 				<?php $item_src = wp_get_attachment_image_src($clients_item, 'large'); ?>
@@ -173,6 +173,8 @@ Template Name: ГЛАВНАЯ
 					</div>
 				<?php endforeach; ?>
 			</div>
+			<div class="swiper-product-prev cursor-pointer"></div>
+			<div class="swiper-product-next cursor-pointer"></div>
 		</div>
 	</div>
 </section>

@@ -103,23 +103,13 @@ function init() {
     }
   }
 
-  //Products Animate Hover
-  let seeCatalogBtns = document.querySelectorAll('.desktop .catalog_animate_btn-js a');
-  if (seeCatalogBtns) {
-    for (seeCatalogBtn of seeCatalogBtns) {
-      seeCatalogBtn.addEventListener('mouseenter', function(){
-        let catalogItemIndex = this.dataset.catalogBtnAnimate;  
-        let catalogItemPhoto = document.querySelector('.products_item_photo[data-catalog-photo-animate="'+ catalogItemIndex +'"] img');
-        catalogItemPhoto.classList.add('hover');
-        console.log(catalogItemPhoto);
-      });
-      seeCatalogBtn.addEventListener('mouseleave', function(){
-        let catalogItemIndex = this.dataset.catalogBtnAnimate;  
-        let catalogItemPhoto = document.querySelector('.products_item_photo[data-catalog-photo-animate="'+ catalogItemIndex +'"] img');
-        catalogItemPhoto.classList.remove('hover');
-        console.log(catalogItemPhoto);
-      });
-    }
+  let mobilePhoneIcon = document.querySelector('.mobile_phone_icon');
+  let mobilePhoneCallback = document.querySelector('.mobile_phone_callback');
+  if (mobilePhoneIcon) {
+    mobilePhoneIcon.addEventListener('click', function(){
+      this.classList.toggle('show');
+      mobilePhoneCallback.classList.toggle('show');
+    });
   }
 
   //Swipers
@@ -128,11 +118,12 @@ function init() {
     loop: true,
     autoplay: true,
     slidesPerView: 6,
-    spaceBetween: 16,
+    spaceBetween: 30,
 
     // If we need pagination
-    pagination: {
-      el: '.swiper-pagination-clients',
+    navigation: {
+      nextEl: '.swiper-product-next',
+      prevEl: '.swiper-product-prev',
     },
   });
 
@@ -140,11 +131,12 @@ function init() {
     loop: true,
     autoplay: true,
     slidesPerView: 2,
-    spaceBetween: 8,
+    spaceBetween: 30,
 
     // If we need pagination
-    pagination: {
-      el: '.swiper-pagination-clients',
+    navigation: {
+      nextEl: '.swiper-product-next',
+      prevEl: '.swiper-product-prev',
     },
   });
 

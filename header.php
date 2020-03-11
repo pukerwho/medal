@@ -148,6 +148,31 @@
     <?php endforeach; ?>
   </div>
   <div class="mobile_phone_icon">
-    <img src="<?php bloginfo('template_url'); ?>/img/phone.svg" alt="" width="20px">
+    <img src="<?php bloginfo('template_url'); ?>/img/phone.svg" alt="" width="20px" class="off">
+    <img src="<?php bloginfo('template_url'); ?>/img/secondary_close.svg" alt="" width="20px" class="on">
+  </div>
+  <div class="mobile_phone_callback">
+    <?php $args_contact_page = [
+      'post_type' => 'page',
+      'fields' => 'ids',
+      'nopaging' => true,
+      'meta_key' => '_wp_page_template',
+      'meta_value' => 'tpl_contact.php'
+    ];
+    $contact_pages = get_posts( $args_contact_page );
+    foreach ( $contact_pages as $contact_page ): ?>
+      <div class="phones flex flex-col items-center mb-6">
+        <?php $header_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
+          foreach ($header_phones as $header_phone): ?>
+          <a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>" class="phone-link">
+            <?php echo $header_phone['crb_contact_phone'] ?>
+          </a>
+        <?php endforeach; ?>
+      </div>
+    <?php endforeach; ?>
+    <div class="btn flex justify-center items-center modal_click_js cursor-pointer" data-modal-id="modal_order">
+      <span class="mr-4"><?php _e('Заказать просчет', 's-cast'); ?></span>
+      <img src="<?php bloginfo('template_url'); ?>/img/order-arrow.svg" alt="" width="25px" class="-mt-1">
+    </div>
   </div>
   <section id="content" role="main">

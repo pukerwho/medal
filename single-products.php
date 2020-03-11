@@ -70,7 +70,7 @@
 	</h2>
 </div>
 <div class="mb-24">
-	<div class="swiper-container swiper-other_products-container other_products" style="padding: 0 70px;">
+	<div class="swiper-container swiper-other_products-container other_products">
 		<div class="container swiper-wrapper mx-auto">
 			<?php
 				$current_term = wp_get_post_terms(  get_the_ID() , 'cats', array() );
