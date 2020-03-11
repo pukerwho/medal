@@ -45611,16 +45611,18 @@ div.wpcf7 .ajax-loader {
     transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s; }
     @media (max-width: 970px) {
-      .modal.open .close_btn {
-        content: '';
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        top: 0.5rem;
-        right: 1.5rem;
-        background: url("../img/close.svg");
-        background-size: contain;
-        cursor: pointer; } }
+      .modal.open {
+        z-index: 99; }
+        .modal.open .close_btn {
+          content: '';
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          top: 0.5rem;
+          right: 1.5rem;
+          background: url("../img/close.svg");
+          background-size: contain;
+          cursor: pointer; } }
   .modal_block {
     background: url("../img/menu-bg.svg");
     background-size: 400%;
