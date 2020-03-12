@@ -33,25 +33,25 @@
 		<div class="content">
 			<div class="content_bg mb-8">
 				<div class="content_item">
-					<span><?php _e('Способ производства:', 's-cast'); ?></span><span>химическая гравировка</span>
+					<span><?php _e('Способ производства:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_sposob'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Материал:', 's-cast'); ?></span><span>латунь</span>
+					<span><?php _e('Материал:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_material'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Покрытие:', 's-cast'); ?></span><span>никель</span>
+					<span><?php _e('Покрытие:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_pokritie'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Эмаль:', 's-cast'); ?></span><span>без эмали</span>
+					<span><?php _e('Эмаль:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_emal'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Размер:', 's-cast'); ?></span><span>73 Х 100 мм</span>
+					<span><?php _e('Размер:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_razmer'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Толщина метала:', 's-cast'); ?></span><span>2,5мм</span>
+					<span><?php _e('Толщина метала:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_tolshina'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Крепление:', 's-cast'); ?></span><span>лента</span>
+					<span><?php _e('Крепление:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_kreplenie'); ?></span>
 				</div>
 			</div>
 			<div class="w-full inline-flex justify-end px-4 lg:px-0">
