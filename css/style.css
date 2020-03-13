@@ -44365,7 +44365,7 @@ li {
         position: absolute;
         bottom: 0;
         background: url("../img/menu-bg.svg");
-        background-size: 175%;
+        background-size: 300%;
         background-position: 10%;
         opacity: 0;
         -webkit-transition: 0.25s;
