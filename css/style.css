@@ -44324,7 +44324,10 @@ li {
       height: 100%;
       position: absolute;
       top: 0;
-      background-color: rgba(6, 11, 13, 0.8);
+      background: #060b0d;
+      background: -webkit-gradient(linear, left top, right top, color-stop(95%, #060b0d), to(rgba(0, 121, 107, 0)));
+      background: -o-linear-gradient(left, #060b0d 95%, rgba(0, 121, 107, 0) 100%);
+      background: linear-gradient(90deg, #060b0d 95%, rgba(0, 121, 107, 0) 100%);
       z-index: 2;
       left: -webkit-calc(100% - 70px);
       left: calc(100% - 70px); }
@@ -44338,7 +44341,10 @@ li {
       height: 100%;
       position: absolute;
       top: 0;
-      background-color: rgba(6, 11, 13, 0.8);
+      background: #060b0d;
+      background: -webkit-gradient(linear, left top, right top, color-stop(95%, #060b0d), to(rgba(0, 121, 107, 0)));
+      background: -o-linear-gradient(left, #060b0d 95%, rgba(0, 121, 107, 0) 100%);
+      background: linear-gradient(90deg, #060b0d 95%, rgba(0, 121, 107, 0) 100%);
       z-index: 2;
       right: -webkit-calc(100% - 70px);
       right: calc(100% - 70px); }
