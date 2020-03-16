@@ -43897,19 +43897,23 @@ button.swiper-pagination-bullet {
 @font-face {
   font-family: 'BebasNeueBook';
   src: local("BebasNeueBook");
-  src: url("../fonts/BebasNeueBook.otf") format("opentype"); }
+  src: url("../fonts/BebasNeueBook.otf") format("opentype");
+  font-display: swap; }
 @font-face {
   font-family: 'BebasNeueBold';
   src: local("BebasNeueBold");
-  src: url("../fonts/BebasNeueBold.otf") format("opentype"); }
+  src: url("../fonts/BebasNeueBold.otf") format("opentype");
+  font-display: swap; }
 @font-face {
   font-family: 'PTSans-Bold';
   src: local("PTSans-Bold");
-  src: url("../fonts/PTSans-Bold.ttf") format("truetype"); }
+  src: url("../fonts/PTSans-Bold.ttf") format("truetype");
+  font-display: swap; }
 @font-face {
   font-family: 'PTSans-Regular';
   src: local("PTSans-Regular");
-  src: url("../fonts/PTSans-Regular.ttf") format("truetype"); }
+  src: url("../fonts/PTSans-Regular.ttf") format("truetype");
+  font-display: swap; }
 body {
   font-family: 'PTSans-Regular';
   background-color: #060b0d; }
