@@ -30,6 +30,17 @@ function crb_page_theme_options() {
     ));
   Container::make( 'post_meta', 'Main' )
     ->where( 'post_type', '=', 'page' )
+    ->where( 'post_template', '=', 'tpl_tech.php' )
+    ->add_fields( array(
+      Field::make( 'complex', 'crb_tech_blocks', 'Блоки' )
+        ->add_fields( array(
+          Field::make( 'text', 'crb_tech_block_name', 'Заголовок' ),
+          Field::make( 'image', 'crb_tech_block_photo', 'Фото' )->set_value_type( 'url'),
+          Field::make( 'rich_text', 'crb_tech_block_text', 'Текст' ),
+        )),
+    ));  
+  Container::make( 'post_meta', 'Main' )
+    ->where( 'post_type', '=', 'page' )
     ->where( 'post_template', '=', 'tpl_contact.php' )
     ->add_fields( array(
       Field::make( 'textarea', 'crb_contact_address', 'Адрес' ),
