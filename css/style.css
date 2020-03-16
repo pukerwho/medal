@@ -44167,7 +44167,8 @@ li {
         margin-right: 0; }
       .header_bottom .menu-item a {
         color: #000000;
-        font-size: 22px; }
+        font-size: 22px;
+        top: 5px; }
     @media (max-width: 970px) {
       .header_bottom .menu {
         display: none; } }
