@@ -44152,7 +44152,7 @@ li {
       margin-right: 45px; }
   .header_bottom {
     position: relative;
-    background: url("img/menu-bg.svg");
+    background: url(/wp-content/themes/medal/img/menu-bg.svg);
     background-size: 120%;
     background-position: 100%;
     letter-spacing: 0.64px;
@@ -44202,7 +44202,7 @@ li {
         content: '';
         width: 22px;
         height: 13px;
-        background: url("img/order-arrow.svg");
+        background: url(/wp-content/themes/medal .header_bottom .order-btn:after "/img/order-arrow.svg");
         position: absolute;
         top: 50%;
         right: 20px;
