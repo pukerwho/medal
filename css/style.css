@@ -44053,7 +44053,7 @@ li {
   height: 40px;
   position: absolute;
   top: 50%;
-  background: url("img/slider-arrow.svg");
+  background: url(/wp-content/themes/medalimg/slider-arrow.svg);
   background-size: contain;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -44062,7 +44062,7 @@ li {
   .swiper-product-prev:focus, .swiper-product-next:focus {
     outline: none; }
   .swiper-product-prev:hover, .swiper-product-next:hover {
-    background: url("img/slider-arrow-hover.svg");
+    background: url(/wp-content/themes/medalimg/slider-arrow-hover.svg);
     background-size: contain; }
 
 .swiper-product-prev {
@@ -44202,7 +44202,7 @@ li {
         content: '';
         width: 22px;
         height: 13px;
-        background: url(/wp-content/themes/medal .header_bottom .order-btn:after "/img/order-arrow.svg");
+        background: url(/wp-content/themes/medal/img/order-arrow.svg);
         position: absolute;
         top: 50%;
         right: 20px;
@@ -44365,7 +44365,7 @@ li {
         height: 100%;
         position: absolute;
         bottom: 0;
-        background: url("img/menu-bg.svg");
+        background: url(/wp-content/themes/medalimg/menu-bg.svg);
         background-size: 300%;
         background-position: 10%;
         opacity: 0;
@@ -44437,7 +44437,7 @@ li {
         content: '';
         width: 22px;
         height: 13px;
-        background: url("img/secondary-arrow.svg");
+        background: url(/wp-content/themes/medalimg/secondary-arrow.svg);
         position: absolute;
         top: 50%;
         right: -27px;
@@ -44606,7 +44606,7 @@ li {
   top: -30px;
   right: 0; }
   .single-products .content_bg {
-    background: url("img/menu-bg.svg");
+    background: url(/wp-content/themes/medalimg/menu-bg.svg);
     background-size: 300%;
     background-position: 50%;
     padding: 65px 0;
@@ -44827,7 +44827,7 @@ li {
   position: absolute;
   top: 25px;
   left: -15px;
-  background: url("img/menu-bg.svg");
+  background: url(/wp-content/themes/medalimg/menu-bg.svg);
   background-size: 400%;
   background-position: 10%; }
 .p_contact #map {
@@ -44954,7 +44954,7 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    background: url("img/menu-bg.svg");
+    background: url(/wp-content/themes/medalimg/menu-bg.svg);
     background-size: 200%;
     background-position: 50%;
     opacity: 0;
@@ -45321,7 +45321,7 @@ div.wpcf7 .ajax-loader {
       bottom: -webkit-calc(1rem + 60px);
       bottom: calc(1rem + 60px);
       right: 0.5rem;
-      background: url("img/menu-bg.svg");
+      background: url(/wp-content/themes/medalimg/menu-bg.svg);
       background-size: 400%;
       background-position: 10%;
       z-index: 5;
@@ -45621,11 +45621,11 @@ div.wpcf7 .ajax-loader {
           position: absolute;
           top: 0.5rem;
           right: 1.5rem;
-          background: url("img/close.svg");
+          background: url(/wp-content/themes/medalimg/close.svg);
           background-size: contain;
           cursor: pointer; } }
   .modal_block {
-    background: url("img/menu-bg.svg");
+    background: url(/wp-content/themes/medalimg/menu-bg.svg);
     background-size: 400%;
     background-position: 10%; }
     @media (max-width: 970px) {
