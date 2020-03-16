@@ -7,7 +7,7 @@ Template Name: ТЕХНОЛОГИИ
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<div class="tech">
+	<div class="tech pt-16">
 		<div class="container mx-auto mb-20">
 			<div class="w-full">
 				<h1 class="with_line mb-8">
