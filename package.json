@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Time To TOP",
   "main": "index.js",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,5 +16,12 @@
     "gulp-sass": "^4.0.2",
     "sass-watch": "^0.1.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "autoprefixer": "^9.7.4"
+  },
+  "browserslist": [
+    "last 5 version",
+    "> 1%",
+    "IE 10"
+  ]
 }

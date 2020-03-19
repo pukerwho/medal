@@ -42856,6 +42856,9 @@ li {
         top: 30%;
         left: 1rem;
         right: 1rem; } }
+    @media (min-width: 767px) and (max-width: 1280px) {
+      .hero .slider .slide_title {
+        top: 200px; } }
     .hero .slider .slide_title b {
       font-family: "BebasNeueBold";
       color: #d1a461; }
