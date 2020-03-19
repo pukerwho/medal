@@ -1,21 +1,28 @@
-'use strict';
- 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var inlinesource = require('gulp-inline-source');
- 
-gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
-});
- 
-gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
-});
+const { src, dest, series } = require('gulp');
+const sass = require('gulp-sass');
+const inlinesource = require('gulp-inline-source');
+const autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('inlinesource', function () {
-    return gulp.src('temp/header.php')
-        .pipe(inlinesource())
-        .pipe(gulp.dest('./'));
-});
+function scss() {
+  return src('./sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(dest('./temp'));
+}
+
+function prefix() {
+  return src('./temp/style.css')
+    .pipe(autoprefixer())
+    .pipe(dest('./css'));
+}
+
+function inlinecss() {
+  return src('temp/header.php')
+    .pipe(inlinesource())
+    .pipe(dest('./'));
+}
+
+exports.prefix = prefix;
+exports.scss = scss;
+exports.inlinecss = inlinecss;
+
+exports.default = series(scss, prefix, inlinecss);

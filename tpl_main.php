@@ -13,7 +13,6 @@ Template Name: ГЛАВНАЯ
 				<div class="swiper-wrapper">
 					<?php $slider_items = carbon_get_the_post_meta('crb_hero_slide');
 					foreach ( $slider_items as $slider_item ): ?>
-						<?php $item_src = wp_get_attachment_image_src($slider_item, 'large'); ?>
 						<div class="swiper-slide">
 							<div class="slide">
 								<div class="slide_img">
