@@ -43079,23 +43079,25 @@ li {
       .swiper-other_products-container:before, .swiper-container-clients:before {
         right: calc(100% - 40px); } }
 
-.rules_title {
-  font-family: "BebasNeueBook";
-  font-size: 32px;
-  letter-spacing: 0.64px;
-  line-height: 1;
-  text-transform: uppercase;
-  padding-bottom: 30px; }
-  @media (max-width: 767px) {
-    .rules_title {
-      padding-bottom: 18px; } }
-  .rules_title mark {
-    color: #d1a461;
-    background-color: transparent; }
-.rules_description {
-  font-family: "PTSans-Regular";
-  font-size: 17px;
-  line-height: 24px; }
+.rules {
+  overflow: hidden; }
+  .rules_title {
+    font-family: "BebasNeueBook";
+    font-size: 32px;
+    letter-spacing: 0.64px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding-bottom: 30px; }
+    @media (max-width: 767px) {
+      .rules_title {
+        padding-bottom: 18px; } }
+    .rules_title mark {
+      color: #d1a461;
+      background-color: transparent; }
+  .rules_description {
+    font-family: "PTSans-Regular";
+    font-size: 17px;
+    line-height: 24px; }
 
 .single-products #content {
   padding-top: 165px; }
