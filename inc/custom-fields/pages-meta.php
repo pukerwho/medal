@@ -12,7 +12,7 @@ function crb_page_theme_options() {
       Field::make( 'textarea', 'crb_main_description', 'Описание услуг' ),
       Field::make( 'textarea', 'crb_main_proizvoditel', 'Информация о производителе' ),
       Field::make( 'complex', 'crb_hero_slide', 'Слайдер' )->add_fields( array(
-        Field::make( 'image', 'crb_hero_slide_img', 'Картинка' )->set_value_type( 'url'),
+        Field::make( 'image', 'crb_hero_slide_img', 'Картинка' ),
         Field::make( 'textarea', 'crb_hero_slide_title', 'Заголовок' ),
       )),
       Field::make( 'complex', 'crb_main_adv', 'Наши преимущества' )

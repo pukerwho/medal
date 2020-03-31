@@ -16,7 +16,15 @@ Template Name: ГЛАВНАЯ
 						<div class="swiper-slide">
 							<div class="slide">
 								<div class="slide_img">
-									<img src="<?php echo $slider_item['crb_hero_slide_img']; ?>" alt="">
+									<?php 
+										$slider_src_medium = wp_get_attachment_image_src($slider_item['crb_hero_slide_img'], 'medium'); 
+										$slider_src_large = wp_get_attachment_image_src($slider_item['crb_hero_slide_img'], 'large'); 
+										$slider_src_full = wp_get_attachment_image_src($slider_item['crb_hero_slide_img'], 'full'); 
+									?>
+									<img srcset="<?php echo $slider_src_medium[0] ?>, 
+									<?php echo $slider_src_large[0] ?> 1.5x,
+									<?php echo $slider_src_full[0] ?> 2x"
+									src="<?php echo $slider_src_full[0] ?>" alt="" loading="lazy">
 								</div>
 								<div class="container mx-auto px-4 lg:px-0">
 									<div class="slide_title large-font">
@@ -48,7 +56,7 @@ Template Name: ГЛАВНАЯ
 							<div class="slide">
 								<a href="<?php echo get_term_link($cat->term_id, 'cats') ?>">
 									<div class="slide_img">
-										<img src="<?php echo carbon_get_term_meta($cat->term_id, 'crb_term_photo') ?>" alt="<?php echo $cat->name ?>	">
+										<img src="<?php echo carbon_get_term_meta($cat->term_id, 'crb_term_photo') ?>" alt="<?php echo $cat->name ?>	" loading="lazy">
 									</div>
 									<div class="slide_info">
 										<div class="slide_title uppercase">
@@ -148,7 +156,7 @@ Template Name: ГЛАВНАЯ
 				</a>
 			</div>
 		</div>
-		<img src="<?php echo get_the_post_thumbnail_url( $about_page ); ?>" alt="" class="about_bg">
+		<img src="<?php echo get_the_post_thumbnail_url( $about_page ); ?>" alt="" class="about_bg" loading="lazy">
 	</div>
 	<?php endforeach; ?>
 </section>
