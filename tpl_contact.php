@@ -15,8 +15,8 @@ Template Name: КОНТАКТЫ
 		</div>
 		<div class="p_contact_content relative">
 			<div class="container mx-auto">
-				<div class="flex">
-					<div class="w-full lg:w-1/3 p_contact_info">
+				<div class="flex flex-col lg:flex-row">
+					<div class="w-full lg:w-1/3 p_contact_info mb-10 lg:mb-0">
 						<!-- Телефоны -->
 						<div class="phones">
 							<?php $footer_phones = carbon_get_the_post_meta('crb_contact_phones');
@@ -59,8 +59,8 @@ Template Name: КОНТАКТЫ
 function initMap() {
   // Styles a map in night mode.
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.674, lng: -73.945},
-    zoom: 12,
+    center: {lat: 49.9900374, lng: 36.2200001},
+    zoom: 14,
     styles: [
     {
       "featureType": "all",
