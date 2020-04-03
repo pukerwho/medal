@@ -51,7 +51,7 @@
               <div class="contacts flex">
                 <div class="phones">
                   <?php $header_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
-                    foreach (array_slice($header_phones,0,2) as $header_phone): ?>
+                    foreach (array_slice($header_phones,0,1) as $header_phone): ?>
                     <a href="tel:<?php echo $header_phone['crb_contact_phone'] ?>">
                       <?php echo $header_phone['crb_contact_phone'] ?>
                     </a>
