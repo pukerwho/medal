@@ -25,7 +25,7 @@ Template Name: КОНТАКТЫ
 				      <?php endforeach; ?>
 			      </div>
 			      <!-- Кнопка -->
-				    <div class="p_contact_btn">
+				    <div class="p_contact_btn modal_click_js cursor-pointer" data-modal-id="modal_callback">
 							<?php _e('Обратный звонок', 's-cast'); ?>
 						</div>
 						<!-- Emails -->
