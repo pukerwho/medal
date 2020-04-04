@@ -87,9 +87,9 @@
     </div>
     <div class="modal modal_callback" data-modal-id="modal_callback">
       <div class="close_btn"></div>
-      <div class="modal_block">
-        <div class="my_bg_gray rounded-lg py-8 px-12">
-          <h3 class="roboto-bold text-xl text-center uppercase mb-6"><?php _e( 'Заказать звонок', 's-cast' ); ?></h3>
+      <div class="modal_block rounded-lg shadow-lg pb-12">
+        <div class="px-4 py-8 lg:px-12">
+          <h3 class="secondary-font text-black text-3xl text-center uppercase mb-6"><?php _e( 'Обратный звонок', 's-cast' ); ?></h3>
           <div>
             <?php 
               $form_callback = carbon_get_theme_option(
