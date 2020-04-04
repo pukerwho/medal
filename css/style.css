@@ -44009,6 +44009,8 @@ div.wpcf7 .ajax-loader {
       opacity: 1;
       z-index: 10;
       transition: opacity 0.35s; }
+  .modal_callback input[type=submit] {
+    width: 100%; }
   .modal input, .modal textarea {
     border: 2px solid #060b0d;
     color: #060b0d; }
