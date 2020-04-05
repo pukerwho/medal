@@ -43666,8 +43666,7 @@ input[type="submit"] {
   margin-bottom: 0; }
   @media (max-width: 767px) {
     input[type="submit"] {
-      width: 100%;
-      margin-top: -1rem; } }
+      width: 100%; } }
 
 div.wpcf7 .ajax-loader {
   position: absolute;
@@ -44039,6 +44038,9 @@ div.wpcf7 .ajax-loader {
   .modal input[type="submit"] {
     padding: 3px 20px 0px 20px;
     border: 2px solid #d1a461; }
+  @media (max-width: 767px) {
+    .modal textarea {
+      margin-bottom: 0; } }
 
 /* SWIPER */
 .swiper-pagination {
