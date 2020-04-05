@@ -43666,7 +43666,8 @@ input[type="submit"] {
   margin-bottom: 0; }
   @media (max-width: 767px) {
     input[type="submit"] {
-      width: 100%; } }
+      width: 100%;
+      margin-top: -1rem; } }
 
 div.wpcf7 .ajax-loader {
   position: absolute;
@@ -43989,9 +43990,9 @@ div.wpcf7 .ajax-loader {
           font-family: "BebasNeueBook";
           text-transform: uppercase;
           text-align: center;
-          border: 1px solid;
+          border: 2px solid;
           float: left;
-          margin-top: 1.5rem;
+          margin-top: 1rem;
           padding: 0.75rem; } }
   .modal_block {
     background: url(/wp-content/themes/medal/img/menu-bg.svg);
