@@ -14,11 +14,15 @@ Template Name: КОНТАКТЫ
 			</h2>
 		</div>
 		<div class="p_contact_content relative">
-			<div class="container mx-auto">
+			<div class="container mx-auto px-4 lg:px-0">
 				<div class="flex flex-col lg:flex-row">
 					<div class="w-full lg:w-1/3 p_contact_info mb-10 lg:mb-0">
 						<!-- Телефоны -->
 						<div class="phones">
+              <?php $footer_vibers = carbon_get_the_post_meta('crb_contact_vibers');
+              foreach ($footer_vibers as $footer_viber): ?>
+                <a href="tel:<?php echo $footer_viber['crb_contact_viber'] ?>" class="phone"><?php echo $footer_viber['crb_contact_viber'] ?> <span class="ml-2">(Viber)</span></a>
+              <?php endforeach; ?>
 							<?php $footer_phones = carbon_get_the_post_meta('crb_contact_phones');
 				      foreach ($footer_phones as $footer_phone): ?>
 								<a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>" class="phone"><?php echo $footer_phone['crb_contact_phone'] ?></a>

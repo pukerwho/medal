@@ -44,6 +44,10 @@ function crb_page_theme_options() {
     ->where( 'post_template', '=', 'tpl_contact.php' )
     ->add_fields( array(
       Field::make( 'textarea', 'crb_contact_address', 'Адрес' ),
+      Field::make( 'complex', 'crb_contact_vibers', 'Viber' )
+      ->add_fields( array(
+        Field::make( 'text', 'crb_contact_viber', 'Номер viber' ),
+      )),
       Field::make( 'complex', 'crb_contact_phones', 'Телефоны' )
       ->add_fields( array(
         Field::make( 'text', 'crb_contact_phone', 'Номер телефона' ),

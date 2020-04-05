@@ -43297,6 +43297,9 @@ li {
   margin-bottom: 60px; }
 .p_contact_info {
   height: 565px; }
+  @media (max-width: 767px) {
+    .p_contact_info {
+      height: auto; } }
 .p_contact_btn {
   display: inline-block;
   color: #ffffff;
@@ -43334,6 +43337,10 @@ li {
   position: absolute;
   top: 0;
   right: 0; }
+  @media (max-width: 767px) {
+    .p_contact .map_container {
+      width: 100%;
+      position: relative; } }
 .p_contact .before_map {
   width: 45%;
   height: 530px;
@@ -43975,15 +43982,17 @@ div.wpcf7 .ajax-loader {
       .modal.open {
         z-index: 99; }
         .modal.open .close_btn {
-          content: '';
-          width: 25px;
-          height: 25px;
-          position: absolute;
-          top: 0.5rem;
-          right: 1.5rem;
-          background: url(/wp-content/themes/medal/img/close.svg);
-          background-size: contain;
-          cursor: pointer; } }
+          width: 100%;
+          position: relative;
+          color: #000;
+          font-size: 18px;
+          font-family: "BebasNeueBook";
+          text-transform: uppercase;
+          text-align: center;
+          border: 1px solid;
+          float: left;
+          margin-top: 1.5rem;
+          padding: 0.75rem; } }
   .modal_block {
     background: url(/wp-content/themes/medal/img/menu-bg.svg);
     background-size: 400%;
