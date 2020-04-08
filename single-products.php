@@ -1,9 +1,20 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php 
+		$current_term = wp_get_post_terms(  get_the_ID() , 'cats', array() );
+		foreach ($current_term as $myterm); {
+			$current_term_slug = $myterm->slug;
+			$current_term_name = $myterm->name;
+			$current_term_link = get_term_link($myterm);
+		}
+	?>
 <div class="container mx-auto">
-	<div class="back px-4 lg:px-0 mb-10 lg:mb-8">
-		Назад
+	<div class="back inline-flex cursor-pointer px-4 lg:px-0 mb-10 lg:mb-8">
+		<a href="<?php echo $current_term_link; ?>" class="flex items-center">
+			<img src="<?php bloginfo('template_url'); ?>/img/arrow-left.svg" alt="" width="25px" class="rotate-180 -mt-1 mr-4" style="transform: rotate(-180deg);">
+			<span><?php _e('Назад', 's-cast'); ?></span>
+		</a>
 	</div>
 	<div class="title">
 		<?php the_title(); ?>
@@ -66,17 +77,13 @@
 
 <div class="container mx-auto">
 	<h2 class="with_line mb-16">
-		<?php _e( 'Другие медали', 's-cast' ); ?>
+		<?php _e( 'Другие', 's-cast' ); ?> <span class="ml-2"><?php echo $current_term_name; ?></span>
 	</h2>
 </div>
 <div class="mb-24">
 	<div class="swiper-container swiper-other_products-container other_products">
 		<div class="container swiper-wrapper mx-auto">
 			<?php
-				$current_term = wp_get_post_terms(  get_the_ID() , 'cats', array() );
-				foreach ($current_term as $myterm); {
-					$current_term_slug = $myterm->slug;
-				}
 				$current_id = get_the_ID();
 				$custom_query = new WP_Query( array( 
 				'post_type' => 'products',
