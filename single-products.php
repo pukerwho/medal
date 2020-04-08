@@ -2,12 +2,11 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php 
-		$current_term = wp_get_post_terms(  get_the_ID() , 'cats', array() );
-		foreach ($current_term as $myterm); {
-			$current_term_slug = $myterm->slug;
-			$current_term_name = $myterm->name;
-			$current_term_link = get_term_link($myterm);
-		}
+		$current_term = wp_get_post_terms(  get_the_ID() , 'cats', array('orderby' => 'parent', 'order' => 'ASC') );
+		$current_term_parent = $current_term[0];
+		$current_term_slug = $current_term_parent->slug;
+		$current_term_name = $current_term_parent->name;
+		$current_term_link = get_term_link($current_term_parent);	
 	?>
 <div class="container mx-auto">
 	<div class="back inline-flex cursor-pointer px-4 lg:px-0 mb-10 lg:mb-8">
