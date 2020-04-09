@@ -42682,6 +42682,8 @@ li {
       transform: scaleX(1); }
   .header .menu {
     text-transform: uppercase; }
+    .header .menu-item:first-of-type {
+      padding-left: 0; }
     .header .menu .current-menu-item a {
       color: #d1a461; }
   .header_top {
