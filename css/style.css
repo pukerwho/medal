@@ -42720,6 +42720,7 @@ li {
         background-color: #1d2225;
         border-radius: 0.25rem;
         z-index: 1;
+        margin-left: -1.5rem;
         padding: 1rem 1.5rem; }
         .header_top .phones_sub:hover {
           display: flex; }
