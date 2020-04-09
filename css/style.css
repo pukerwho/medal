@@ -42713,6 +42713,22 @@ li {
         @media (min-width: 767px) and (max-width: 1280px) {
           .header_top .phones a {
             font-size: 14px; } }
+      .header_top .phones_sub {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #1d2225;
+        border-radius: 0.25rem;
+        z-index: 1;
+        padding: 1rem 1.5rem; }
+        .header_top .phones_sub:hover {
+          display: flex; }
+        .header_top .phones_sub a {
+          margin-right: 0; }
+          .header_top .phones_sub a:hover:after {
+            content: none; }
+      .header_top .phones:hover .phones_sub {
+        display: flex; }
     .header_top .emails {
       margin-right: 45px; }
       @media (min-width: 767px) and (max-width: 1280px) {
