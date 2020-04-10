@@ -43,25 +43,25 @@
 		<div class="content">
 			<div class="content_bg mb-8">
 				<div class="content_item">
-					<span><?php _e('Способ производства:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_sposob'); ?></span>
+					<span><?php _e('Способ производства', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_sposob'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Материал:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_material'); ?></span>
+					<span><?php _e('Материал', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_material'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Покрытие:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_pokritie'); ?></span>
+					<span><?php _e('Покрытие', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_pokritie'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Эмаль:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_emal'); ?></span>
+					<span><?php _e('Эмаль', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_emal'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Размер:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_razmer'); ?></span>
+					<span><?php _e('Размер', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_razmer'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Толщина метала:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_tolshina'); ?></span>
+					<span><?php _e('Толщина метала', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_tolshina'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Крепление:', 's-cast'); ?></span><span><?php echo carbon_get_the_post_meta('crb_product_kreplenie'); ?></span>
+					<span><?php _e('Крепление', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_kreplenie'); ?></span>
 				</div>
 			</div>
 			<div class="w-full inline-flex justify-end px-4 lg:px-0">
