@@ -177,7 +177,7 @@
     ];
     $contact_pages = get_posts( $args_contact_page );
     foreach ( $contact_pages as $contact_page ): ?>
-      <div class="phones flex flex-col items-center mb-6">
+      <div class="phones flex flex-col mb-6">
         <?php $header_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
         foreach ($header_phones as $header_phone): ?>
           <a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>" class="phone-link">
