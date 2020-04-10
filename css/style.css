@@ -42662,6 +42662,7 @@ li {
   z-index: 2; }
   @media (max-width: 767px) {
     .header {
+      position: fixed;
       z-index: 12; } }
   .header li:before {
     content: none; }
@@ -43724,7 +43725,7 @@ div.wpcf7 .ajax-loader {
   width: 100%;
   min-height: 100vh;
   min-height: calc(100vh + 1px);
-  position: absolute;
+  position: fixed;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.9);
   opacity: 0;
