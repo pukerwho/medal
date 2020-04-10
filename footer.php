@@ -40,7 +40,7 @@
                     <?php $footer_emails = carbon_get_post_meta($contact_page, 'crb_contact_emails');
                     foreach ($footer_emails as $footer_email): ?>
                       <div>
-                        <a href="mailto:<?php echo $footer_email['crb_contact_email'] ?>"><?php echo $footer_email['crb_contact_email'] ?></a>
+                        <a href="mailto:<?php echo $footer_email['crb_contact_email'] ?>">info@s-cast.ua</a>
                       </div>
                     <?php endforeach; ?>
                   </div>
@@ -56,7 +56,7 @@
     <?php endif; ?>
     <div class="copyright">
       <div class="container mx-auto text-center lg:text-left">
-        © 2020. S-CAST.COM.UA  
+        <?php echo get_theme_mod( 'copyright_text' ); ?>
       </div>
     </div>
     

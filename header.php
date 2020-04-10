@@ -72,7 +72,7 @@
                 <div class="emails">
                   <?php $header_emails = carbon_get_post_meta($contact_page, 'crb_contact_emails');
                   foreach ($header_emails as $header_email): ?>
-                    <a href="mailto:<?php echo $header_email['crb_contact_email'] ?>"><?php echo $header_email['crb_contact_email'] ?></a>
+                    <a href="mailto:<?php echo $header_email['crb_contact_email'] ?>">info@s-cast.ua</a>
                   <?php endforeach; ?>
                 </div>
                 <div class="social flex">
@@ -179,10 +179,14 @@
     foreach ( $contact_pages as $contact_page ): ?>
       <div class="phones flex flex-col items-center mb-6">
         <?php $header_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
-          foreach ($header_phones as $header_phone): ?>
+        foreach ($header_phones as $header_phone): ?>
           <a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>" class="phone-link">
             <?php echo $header_phone['crb_contact_phone'] ?>
           </a>
+        <?php endforeach; ?>
+        <?php $footer_vibers = carbon_get_post_meta($contact_page, 'crb_contact_vibers');
+        foreach ($footer_vibers as $footer_viber): ?>
+          <a href="tel:<?php echo $footer_viber['crb_contact_viber'] ?>" class="phone-link"><?php echo $footer_viber['crb_contact_viber'] ?> <span class="ml-2">(Viber)</span></a>
         <?php endforeach; ?>
       </div>
     <?php endforeach; ?>
