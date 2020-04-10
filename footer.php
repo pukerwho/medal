@@ -2,7 +2,7 @@
     <?php if( !is_page_template( 'tpl_contact.php' )): ?>
       <footer id="footer" class="footer">
         <div class="container mx-auto px-4 lg:px-0">
-          <h2 class="with_line"><?php _e('Ответим на все вопросы'); ?></h2>
+          <h2 class="with_line"><?php _e('Ответим на все вопросы', 's-cast'); ?></h2>
           <div class="flex justify-center">
             <div class="flex w-full lg:w-5/6 flex-col lg:flex-row">
               <div class="w-full lg:w-1/2 footer_form mb-16 pr-0 lg:pr-20 lg:mb-0">
