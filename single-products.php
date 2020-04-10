@@ -58,7 +58,7 @@
 					<span><?php _e('Размер', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_razmer'); ?></span>
 				</div>
 				<div class="content_item">
-					<span><?php _e('Толщина метала', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_tolshina'); ?></span>
+					<span><?php _e('Толщина металла', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_tolshina'); ?></span>
 				</div>
 				<div class="content_item">
 					<span><?php _e('Крепление', 's-cast'); ?>:</span><span><?php echo carbon_get_the_post_meta('crb_product_kreplenie'); ?></span>
