@@ -181,12 +181,6 @@
                 </div>
               </div>
             <?php endforeach; ?>   
-            <div class="switcher-lang flex items-center">
-              <?php pll_the_languages(array(
-                'show_flags' => 0,
-                'show_names' => 1,
-              )); ?> 
-            </div>
           </div>
           <div class="order-btn secondary-bg modal_click_js cursor-pointer" data-modal-id="modal_order">
             <span>Заказать просчет</span>
