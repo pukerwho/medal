@@ -11,19 +11,28 @@ function init() {
     },
   });
 
-  let headerClass = document.querySelector('.header');
+  let headerScrollClass = document.querySelector('.header_scroll');
 
   function fixedHeader(currentScroll) {
-    if (currentScroll > 110) {
-      headerClass.classList.add('header_fixed');
+    if (currentScroll > 145) {
+      headerScrollClass.classList.add('show');
     } else {
-      headerClass.classList.remove('header_fixed');
+      headerScrollClass.classList.remove('show');
     }
   }
 
   window.addEventListener('scroll', function(){
     currentScroll = pageYOffset;
     fixedHeader(currentScroll);
+  });
+
+  //HeaderScrollSub
+  let headerScrollSub = document.querySelector('.header_scroll_sub');
+  let headerScrollCatalogBtn = document.querySelector('.header_scroll .catalog');
+  let headerScrollCatalogIcon = document.querySelector('.header_scroll .catalog .icon');
+  headerScrollCatalogBtn.addEventListener('click', function(){
+    headerScrollSub.classList.toggle('show');
+    headerScrollCatalogIcon.classList.toggle('show');
   });
 
   function SliderPost() {
