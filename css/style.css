@@ -42844,7 +42844,7 @@ li {
   .header_scroll {
     width: 100%;
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 0;
     visibility: hidden;
     opacity: 0;
@@ -43362,7 +43362,7 @@ li {
     font-size: 17px;
     font-family: "PTSans-Regular";
     line-height: 24px;
-    z-index: 3; }
+    z-index: 1; }
     .about_content.cast-animate {
       opacity: 0; }
       .about_content.cast-animate.cast-show {
