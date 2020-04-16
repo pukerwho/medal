@@ -44225,6 +44225,8 @@ div.wpcf7 .ajax-loader {
     padding: 3px 20px 0px 20px;
     border: 2px solid #d1a461;
     float: left; }
+  .modal input[type="file"] + label {
+    color: #000; }
   @media (max-width: 767px) {
     .modal textarea {
       margin-bottom: 0; } }
