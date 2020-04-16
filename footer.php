@@ -49,17 +49,23 @@
     	</div>
     </div>
     <div class="modal modal_innerorder" data-modal-id="modal_innerorder">
-      <div class="modal_block rounded-lg shadow-lg pb-0 lg:pb-12">
-        <div class="px-4 py-8 lg:px-12">
-          <h3 class="secondary-font text-black text-3xl text-center uppercase mb-6">
-            <?php _e( 'Рассчитать заказ', 's-cast' ); ?></h3>
-          <div>
-            <?php 
-              $form_innerpage = carbon_get_theme_option(
-            'crb_form_inner'); 
-              echo do_shortcode(''. $form_innerpage .'');
-            ?>
-            <div class="close_btn"><?php _e('Закрыть', 's-cast'); ?></div>
+      <div class="modal_block rounded-lg shadow-lg">
+        <div class="flex flex-col lg:flex-row items-center px-4 py-8 lg:px-12">
+          <div class="w-full lg:w-1/2 pr-0 lg:pr-10">
+            <div>
+              <h3 class="secondary-font text-black text-3xl text-center uppercase mb-6"><?php _e( 'Заказать просчет', 's-cast' ); ?></h3>
+              <div>
+                <?php 
+                  $form_innerpage = carbon_get_theme_option(
+                'crb_form_inner'); 
+                  echo do_shortcode(''. $form_innerpage .'');
+                ?>
+                <div class="close_btn"><?php _e('Закрыть', 's-cast'); ?></div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden lg:block w-full lg:w-1/2 pl-0 lg:pl-10">
+            <?php get_template_part('blocks/footer-contact'); ?>
           </div>
         </div>
       </div>

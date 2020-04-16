@@ -44172,7 +44172,7 @@ div.wpcf7 .ajax-loader {
   .modal .footer_phones a, .modal .footer_emails a {
     font-family: "BebasNeueBook";
     color: #000;
-    font-size: 1.5rem; }
+    font-size: 1.25rem; }
   .modal .footer_address {
     font-family: "BebasNeueBook";
     font-size: 1.5rem;
@@ -44194,7 +44194,8 @@ div.wpcf7 .ajax-loader {
     color: #060b0d; }
   .modal input[type="submit"] {
     padding: 3px 20px 0px 20px;
-    border: 2px solid #d1a461; }
+    border: 2px solid #d1a461;
+    float: left; }
   @media (max-width: 767px) {
     .modal textarea {
       margin-bottom: 0; } }
