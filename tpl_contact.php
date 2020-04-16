@@ -65,7 +65,7 @@ function initMap(mapLat, mapLng) {
   // Styles a map in night mode.
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: <?php echo carbon_get_the_post_meta('crb_contact_map_lat'); ?>, lng: <?php echo carbon_get_the_post_meta('crb_contact_map_lng'); ?>},
-    zoom: 16,
+    zoom: 17,
     styles: [
     {
       "featureType": "all",
