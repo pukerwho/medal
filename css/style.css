@@ -41076,6 +41076,14 @@ video {
 /*$url_theme: mythemetwo/medal/wp-content/themes/medal;*/
 /* COLORS */
 /* FONTS */
+html {
+  --secondary_font: 'BebasNeueBook';
+  --highlight_font: 'BebasNeueBold'; }
+
+html[lang="uk"] {
+  --secondary_font: 'BebasNeueUkr';
+  --highlight_font: 'BebasNeueUkr'; }
+
 .glightbox-container {
   width: 100%;
   height: 100%;
@@ -42475,6 +42483,11 @@ button.swiper-pagination-bullet {
   src: url(/wp-content/themes/medal/fonts/BebasNeueBook.otf) format("opentype");
   font-display: swap; }
 @font-face {
+  font-family: 'BebasNeueUkr';
+  src: local("BebasNeueUkr");
+  src: url(/wp-content/themes/medal/fonts/Bebas_Neue_Cyrillic.ttf) format("truetype");
+  font-display: swap; }
+@font-face {
   font-family: 'BebasNeueBold';
   src: local("BebasNeueBold");
   src: url(/wp-content/themes/medal/fonts/BebasNeueBold.otf) format("opentype");
@@ -42495,14 +42508,14 @@ body {
 
 h2, h1 {
   color: #ffffff;
-  font-family: "BebasNeueBook";
+  font-family: var(--secondary_font);
   font-size: 52px;
   letter-spacing: 0.64px;
   line-height: 1;
   text-transform: uppercase; }
   h2 b, h1 b {
     color: #d1a461;
-    font-family: "BebasNeueBold"; }
+    font-family: var(--highlight_font); }
 
 h2.with_line, h1.with_line {
   position: relative; }
@@ -42619,7 +42632,7 @@ input[type="file"] {
   color: #d1a461; }
 
 .secondary-font {
-  font-family: "BebasNeueBook"; }
+  font-family: var(--secondary_font); }
 
 .large-font {
   font-size: 52px; }
@@ -42638,14 +42651,14 @@ input[type="file"] {
 
 .order-string {
   color: #d1a461;
-  font-family: "BebasNeueBook";
+  font-family: var(--secondary_font);
   font-size: 22px;
   letter-spacing: 0.64px;
   text-transform: uppercase; }
 
 .back {
   color: #d1a461;
-  font-family: "BebasNeueBook";
+  font-family: var(--secondary_font);
   font-size: 22px;
   letter-spacing: 0.64px;
   text-transform: uppercase; }
@@ -42688,7 +42701,7 @@ input[type="file"] {
 .header {
   width: 100%;
   position: absolute;
-  font-family: "BebasNeueBook";
+  font-family: var(--secondary_font);
   z-index: 2; }
   @media (max-width: 767px) {
     .header {
@@ -43022,7 +43035,7 @@ input[type="file"] {
     position: absolute;
     top: 270px;
     z-index: 2;
-    font-family: "BebasNeueBook";
+    font-family: var(--secondary_font);
     color: #ffffff;
     letter-spacing: 0.64px;
     line-height: 1; }
@@ -43035,7 +43048,7 @@ input[type="file"] {
       .hero .slider .slide_title {
         top: 200px; } }
     .hero .slider .slide_title b {
-      font-family: "BebasNeueBold";
+      font-family: var(--highlight_font);
       color: #d1a461; }
 .hero .slider_pagination {
   position: relative; }
@@ -43121,14 +43134,14 @@ input[type="file"] {
       position: relative;
       z-index: 2;
       color: #ffffff;
-      font-family: "BebasNeueBook";
+      font-family: var(--secondary_font);
       font-size: 32px;
       margin-bottom: 5px;
       padding: 10px 15px 0px 15px;
       transition: 0.35s; }
       @media (max-width: 767px) {
         .products .slider .slide_title {
-          font-family: "BebasNeueBold";
+          font-family: var(--highlight_font);
           font-size: 28px;
           text-align: center; } }
     .products .slider .slide_description {
@@ -43150,7 +43163,7 @@ input[type="file"] {
       bottom: 20px;
       right: 45px;
       color: #d1a461;
-      font-family: "BebasNeueBook";
+      font-family: var(--secondary_font);
       font-size: 18px;
       text-align: right;
       transition: 0.35s; }
@@ -43187,7 +43200,7 @@ input[type="file"] {
     position: relative;
     z-index: 1;
     color: #ffffff;
-    font-family: "BebasNeueBook";
+    font-family: var(--secondary_font);
     font-size: 32px;
     letter-spacing: 0.64px;
     text-transform: uppercase;
@@ -43196,7 +43209,7 @@ input[type="file"] {
     position: relative;
     z-index: 1;
     color: #ffffff;
-    font-family: "BebasNeueBook";
+    font-family: var(--secondary_font);
     font-size: 18px;
     letter-spacing: 0.64px;
     text-transform: uppercase;
@@ -43260,7 +43273,7 @@ input[type="file"] {
 .rules {
   overflow: hidden; }
   .rules_title {
-    font-family: "BebasNeueBook";
+    font-family: var(--secondary_font);
     font-size: 32px;
     letter-spacing: 0.64px;
     line-height: 1;
@@ -43285,7 +43298,7 @@ input[type="file"] {
 
 .single-products .title {
   color: #ffffff;
-  font-family: "BebasNeueBook";
+  font-family: var(--secondary_font);
   font-size: 52px;
   letter-spacing: 0.64px;
   text-transform: uppercase;
@@ -43326,7 +43339,7 @@ input[type="file"] {
       padding-right: 5px; }
   .single-products .content_btn {
     color: #ffffff;
-    font-family: "BebasNeueBook";
+    font-family: var(--secondary_font);
     font-size: 22px;
     line-height: 1;
     letter-spacing: 0.64px;
@@ -43408,7 +43421,7 @@ input[type="file"] {
   .about_more {
     position: relative;
     color: #d1a461;
-    font-family: "BebasNeueBook";
+    font-family: var(--secondary_font);
     font-size: 18px;
     letter-spacing: 0.64px;
     text-transform: uppercase;
@@ -43478,7 +43491,7 @@ input[type="file"] {
 .p_contact_btn {
   display: inline-block;
   color: #ffffff;
-  font-family: "BebasNeueBook";
+  font-family: var(--secondary_font);
   font-size: 22px;
   letter-spacing: 0.64px;
   text-transform: uppercase;
@@ -43490,7 +43503,7 @@ input[type="file"] {
   .p_contact .phones .phone {
     display: block;
     color: #ffffff;
-    font-family: "BebasNeueBook";
+    font-family: var(--secondary_font);
     font-size: 32px;
     line-height: 1;
     text-transform: uppercase;
@@ -43547,7 +43560,7 @@ input[type="file"] {
     margin-bottom: 35px; }
     .footer_phones a {
       color: #ffffff;
-      font-family: "BebasNeueBook";
+      font-family: var(--secondary_font);
       font-size: 32px; }
   .footer_emails {
     margin-bottom: 35px; }
@@ -43581,7 +43594,7 @@ input[type="file"] {
     .ups {
       padding-top: 95px; } }
   .ups b {
-    font-family: "BebasNeueBold"; }
+    font-family: var(--highlight_font); }
     @media (max-width: 767px) {
       .ups b {
         display: block; } }
@@ -43591,7 +43604,7 @@ input[type="file"] {
       .ups li {
         display: inline; } }
   .ups .title {
-    font-family: "BebasNeueBook";
+    font-family: var(--secondary_font);
     font-size: 72px;
     line-height: 24px;
     margin-bottom: 25px; }
@@ -43643,7 +43656,7 @@ input[type="file"] {
   position: relative;
   z-index: 2;
   color: #ffffff;
-  font-family: "BebasNeueBold";
+  font-family: var(--highlight_font);
   font-size: 32px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -43665,7 +43678,7 @@ input[type="file"] {
   bottom: 25px;
   z-index: 2;
   color: #d1a461;
-  font-family: "BebasNeueBold";
+  font-family: var(--highlight_font);
   font-size: 18px;
   text-transform: uppercase;
   transition: 0.15s; }
@@ -43732,7 +43745,7 @@ input[type="file"] {
 
 .cats_title {
   color: #ffffff;
-  font-family: "BebasNeueBook";
+  font-family: var(--secondary_font);
   font-size: 52px;
   text-transform: uppercase;
   line-height: 52px;
@@ -43745,7 +43758,7 @@ input[type="file"] {
       text-align: center;
       margin-bottom: 40px; } }
   .cats_title b {
-    font-family: "BebasNeueBold";
+    font-family: var(--highlight_font);
     color: #ffffff; }
 .cats .product {
   height: 370px;
@@ -43776,7 +43789,7 @@ input[type="file"] {
       position: relative;
       z-index: 1;
       color: #ffffff;
-      font-family: "BebasNeueBook";
+      font-family: var(--secondary_font);
       font-size: 32px;
       letter-spacing: 0.64px;
       text-transform: uppercase;
@@ -43785,7 +43798,7 @@ input[type="file"] {
       position: relative;
       z-index: 1;
       color: #ffffff;
-      font-family: "BebasNeueBook";
+      font-family: var(--secondary_font);
       font-size: 18px;
       letter-spacing: 0.64px;
       text-transform: uppercase;
@@ -43830,7 +43843,7 @@ input:focus {
 input[type="submit"] {
   width: auto;
   color: #ffffff;
-  font-family: "BebasNeueBook";
+  font-family: var(--secondary_font);
   font-size: 18px;
   letter-spacing: 0.64px;
   text-transform: uppercase;
@@ -43912,12 +43925,12 @@ div.wpcf7 .ajax-loader {
       .mobile_cover #mobile_center_nav li:before {
         content: none; }
     .mobile_cover #mobile_center_nav a {
-      font-family: "BebasNeueBold";
+      font-family: var(--highlight_font);
       font-size: 36px;
       line-height: 52px; }
       @media (max-width: 767px) {
         .mobile_cover #mobile_center_nav a {
-          font-family: "BebasNeueBook";
+          font-family: var(--secondary_font);
           font-size: 28px;
           line-height: 42px; } }
   .mobile_cover #mobile_bottom_nav {
@@ -43932,7 +43945,7 @@ div.wpcf7 .ajax-loader {
       .mobile_cover #mobile_bottom_nav li:before {
         content: none; }
     .mobile_cover #mobile_bottom_nav a {
-      font-family: "BebasNeueBook";
+      font-family: var(--secondary_font);
       font-size: 16px;
       line-height: 32px; }
 
@@ -43981,7 +43994,7 @@ div.wpcf7 .ajax-loader {
       .mobile_phone_callback .btn {
         width: 100%;
         color: #ffffff;
-        font-family: "BebasNeueBook";
+        font-family: var(--secondary_font);
         font-size: 18px;
         text-transform: uppercase;
         text-align: center;
@@ -44199,11 +44212,11 @@ div.wpcf7 .ajax-loader {
   .modal_callback input[type=submit] {
     width: 100%; }
   .modal .footer_phones a, .modal .footer_emails a {
-    font-family: "BebasNeueBook";
+    font-family: var(--secondary_font);
     color: #000;
     font-size: 1.25rem; }
   .modal .footer_address {
-    font-family: "BebasNeueBook";
+    font-family: var(--secondary_font);
     font-size: 1.25rem;
     color: #000; }
   .modal input, .modal textarea {
