@@ -51,21 +51,13 @@
             foreach ( $contact_pages as $contact_page ): ?>
               <div class="contacts flex">
                 <div class="phones">
-                  <?php $header_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
-                    foreach (array_slice($header_phones,0,1) as $header_phone): ?>
-                    <a href="tel:<?php echo $header_phone['crb_contact_phone'] ?>">
-                      <?php echo $header_phone['crb_contact_phone'] ?>
-                    </a>
+                  <?php $footer_vibers = carbon_get_post_meta($contact_page, 'crb_contact_vibers');
+                    foreach ($footer_vibers as $footer_viber): ?>
+                    <a href="tel:<?php echo $footer_viber['crb_contact_viber'] ?>"><?php echo $footer_viber['crb_contact_viber'] ?></a>
                   <?php endforeach; ?>
                   <div class="phones_sub">
-                    
-                    <?php $footer_vibers = carbon_get_post_meta($contact_page, 'crb_contact_vibers');
-                    foreach ($footer_vibers as $footer_viber): ?>
-                      <a href="tel:<?php echo $footer_viber['crb_contact_viber'] ?>"><?php echo $footer_viber['crb_contact_viber'] ?></a>
-                    <?php endforeach; ?>
-
                     <?php $header_phones_sub = carbon_get_post_meta($contact_page, 'crb_contact_phones');
-                    foreach (array_slice($header_phones_sub,1,10) as $header_phone_sub): ?>
+                    foreach ($header_phones_sub as $header_phone_sub): ?>
                       <a href="tel:<?php echo $header_phone_sub['crb_contact_phone'] ?>">
                         <?php echo $header_phone_sub['crb_contact_phone'] ?>
                       </a>
@@ -128,12 +120,12 @@
     <div class="header_scroll hidden md:flex">
       <div class="container mx-auto">
         <div class="header_scroll_content flex items-center justify-between md:justify-start">
-          <div class="logo">
+          <div class="logo mr-2">
             <a href="<?php echo home_url(); ?>">
               <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="Логотип">
             </a>
           </div>
-          <div class="menu">
+          <div class="menu pr-8">
             <?php wp_nav_menu([
               'theme_location' => 'head_top_menu',
               'menu_id' => 'head_menu',
@@ -153,22 +145,16 @@
             foreach ( $contact_pages as $contact_page ): ?>
               <div class="contacts flex">
                 <div class="phones">
-                  <?php $header_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
-                    foreach (array_slice($header_phones,0,1) as $header_phone): ?>
-                    <a href="tel:<?php echo $header_phone['crb_contact_phone'] ?>">
-                      <?php echo $header_phone['crb_contact_phone'] ?>
-                    </a>
+                  <?php $footer_vibers = carbon_get_post_meta($contact_page, 'crb_contact_vibers');
+                    foreach ($footer_vibers as $footer_viber): ?>
+                    <a href="tel:<?php echo $footer_viber['crb_contact_viber'] ?>"><?php echo $footer_viber['crb_contact_viber'] ?></a>
                   <?php endforeach; ?>
                   <div class="phones_sub">
                     <?php $header_phones_sub = carbon_get_post_meta($contact_page, 'crb_contact_phones');
-                    foreach (array_slice($header_phones_sub,1,10) as $header_phone_sub): ?>
-                    <a href="tel:<?php echo $header_phone_sub['crb_contact_phone'] ?>">
-                      <?php echo $header_phone_sub['crb_contact_phone'] ?>
-                    </a>
-                  <?php endforeach; ?>
-                  <?php $footer_vibers = carbon_get_post_meta($contact_page, 'crb_contact_vibers');
-                    foreach ($footer_vibers as $footer_viber): ?>
-                      <a href="tel:<?php echo $footer_viber['crb_contact_viber'] ?>"><?php echo $footer_viber['crb_contact_viber'] ?> <span class="ml-2">(Viber)</span></a>
+                    foreach ($header_phones_sub as $header_phone_sub): ?>
+                      <a href="tel:<?php echo $header_phone_sub['crb_contact_phone'] ?>">
+                        <?php echo $header_phone_sub['crb_contact_phone'] ?>
+                      </a>
                     <?php endforeach; ?>
                   </div>
                 </div>
