@@ -27,13 +27,13 @@ function init() {
   });
 
   //HeaderScrollSub
-  let headerScrollSub = document.querySelector('.header_scroll_sub');
-  let headerScrollCatalogBtn = document.querySelector('.header_scroll .catalog');
-  let headerScrollCatalogIcon = document.querySelector('.header_scroll .catalog .icon');
-  headerScrollCatalogBtn.addEventListener('click', function(){
-    headerScrollSub.classList.toggle('show');
-    headerScrollCatalogIcon.classList.toggle('show');
-  });
+  // let headerScrollSub = document.querySelector('.header_scroll_sub');
+  // let headerScrollCatalogBtn = document.querySelector('.header_scroll .catalog');
+  // let headerScrollCatalogIcon = document.querySelector('.header_scroll .catalog .icon');
+  // headerScrollCatalogBtn.addEventListener('click', function(){
+  //   headerScrollSub.classList.toggle('show');
+  //   headerScrollCatalogIcon.classList.toggle('show');
+  // });
 
   function SliderPost() {
     let lightSlider = document.querySelector('#lightSlider');

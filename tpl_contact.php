@@ -36,7 +36,7 @@ Template Name: КОНТАКТЫ
 						<div class="emails">
 							<?php $footer_emails = carbon_get_the_post_meta('crb_contact_emails');
 					    foreach ($footer_emails as $footer_email): ?>
-				        <a href="mailto:<?php echo $footer_email['crb_contact_email'] ?>" class="email"><?php echo $footer_email['crb_contact_email'] ?></a>
+				        <a href="mailto:<?php echo $footer_email['crb_contact_email'] ?>" class="email">info@s-cast.ua</a>
 					    <?php endforeach; ?>
 						</div>  
 						<!-- Address -->
@@ -60,10 +60,11 @@ Template Name: КОНТАКТЫ
 <?php endif; ?>	
 
 <script>
-function initMap() {
+
+function initMap(mapLat, mapLng) {
   // Styles a map in night mode.
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 49.9900374, lng: 36.2200001},
+    center: {lat: <?php echo carbon_get_the_post_meta('crb_contact_map_lat'); ?>, lng: <?php echo carbon_get_the_post_meta('crb_contact_map_lng'); ?>},
     zoom: 14,
     styles: [
     {
@@ -394,6 +395,12 @@ function initMap() {
       ]
   	}
 	]
+  });
+
+  var marker = new google.maps.Marker({
+    position: {lat: <?php echo carbon_get_the_post_meta('crb_contact_map_lat'); ?>, lng: <?php echo carbon_get_the_post_meta('crb_contact_map_lng'); ?>},
+    map: map,
+    title: 'S-cast'
   });
 }
 </script>

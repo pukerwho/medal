@@ -42873,15 +42873,16 @@ li {
       width: 100%;
       background-color: rgba(6, 11, 13, 0.8);
       border-radius: 0.25rem;
-      visibility: hidden;
-      opacity: 0;
-      z-index: -1;
-      transition: all 0.35s; }
-      .header_scroll_sub.show {
-        visibility: visible;
-        opacity: 1;
-        z-index: 10;
-        transition: all 0.35s; }
+      visibility: visible;
+      opacity: 1;
+      z-index: 10;
+      transition: all 0.35s;
+      /*&.show {
+      	visibility: visible;
+      	opacity: 1;
+      	z-index: 10;
+      	transition: all 0.35s;
+      }*/ }
       .header_scroll_sub .menu-item a {
         color: #ffffff; }
     .header_scroll.show {
