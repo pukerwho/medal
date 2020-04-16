@@ -42557,6 +42557,35 @@ ul li {
 li {
   list-style-type: none; }
 
+input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  border: 0;
+  padding: 0; }
+  input[type="file"] + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid;
+    padding: 0.625rem 1.25rem; }
+    input[type="file"] + label svg {
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      fill: currentColor;
+      margin-top: -0.25em;
+      margin-right: 0.5em; }
+
 .mb_90 {
   margin-bottom: 90px; }
 
