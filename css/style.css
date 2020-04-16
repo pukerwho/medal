@@ -44169,6 +44169,14 @@ div.wpcf7 .ajax-loader {
       transition: opacity 0.35s; }
   .modal_callback input[type=submit] {
     width: 100%; }
+  .modal .footer_phones a, .modal .footer_emails a {
+    font-family: "BebasNeueBook";
+    color: #000;
+    font-size: 1.5rem; }
+  .modal .footer_address {
+    font-family: "BebasNeueBook";
+    font-size: 1.5rem;
+    color: #000; }
   .modal input, .modal textarea {
     border: 2px solid #060b0d;
     color: #060b0d; }
