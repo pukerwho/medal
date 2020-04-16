@@ -42893,7 +42893,7 @@ li {
     .header_scroll a {
       color: #000000; }
     .header_scroll .logo {
-      margin-right: 20px; }
+      margin-right: 40px; }
     .header_scroll .order-btn {
       padding: 0 55px 0 20px; }
     .header_scroll .catalog {
@@ -42930,9 +42930,9 @@ li {
       margin-right: 5px; }
       .header_scroll .phones a {
         display: inline-block;
-        font-size: 16px;
+        font-size: 18px;
         margin-right: 20px;
-        margin-top: 3.5px; }
+        margin-top: 5px; }
         @media (min-width: 767px) and (max-width: 1280px) {
           .header_scroll .phones a {
             font-size: 14px; } }
@@ -42958,8 +42958,9 @@ li {
     .header_scroll .emails {
       margin-right: 30px; }
       .header_scroll .emails a {
+        font-size: 18px;
         display: inline-block;
-        margin-top: 3.5px; }
+        margin-top: 5px; }
         @media (min-width: 767px) and (max-width: 1280px) {
           .header_scroll .emails a {
             font-size: 14px; } }
