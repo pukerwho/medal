@@ -239,15 +239,15 @@
     $contact_pages = get_posts( $args_contact_page );
     foreach ( $contact_pages as $contact_page ): ?>
       <div class="phones flex flex-col mb-6">
+        <?php $footer_vibers = carbon_get_post_meta($contact_page, 'crb_contact_vibers');
+        foreach ($footer_vibers as $footer_viber): ?>
+          <a href="tel:<?php echo $footer_viber['crb_contact_viber'] ?>" class="phone-link"><?php echo $footer_viber['crb_contact_viber'] ?> <span class="ml-2">(Viber)</span></a>
+        <?php endforeach; ?>
         <?php $header_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
         foreach ($header_phones as $header_phone): ?>
           <a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>" class="phone-link">
             <?php echo $header_phone['crb_contact_phone'] ?>
           </a>
-        <?php endforeach; ?>
-        <?php $footer_vibers = carbon_get_post_meta($contact_page, 'crb_contact_vibers');
-        foreach ($footer_vibers as $footer_viber): ?>
-          <a href="tel:<?php echo $footer_viber['crb_contact_viber'] ?>" class="phone-link"><?php echo $footer_viber['crb_contact_viber'] ?> <span class="ml-2">(Viber)</span></a>
         <?php endforeach; ?>
       </div>
     <?php endforeach; ?>
