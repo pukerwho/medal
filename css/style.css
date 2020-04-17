@@ -41073,7 +41073,7 @@ video {
 
   .xl\:z-auto {
     z-index: auto; } }
-/*$url_theme: mythemetwo/medal/wp-content/themes/medal;*/
+/*$url_theme: /wp-content/themes/medal;*/
 /* COLORS */
 /* FONTS */
 html {
@@ -42482,32 +42482,32 @@ button.swiper-pagination-bullet {
 @font-face {
   font-family: 'BebasNeueBook';
   src: local("BebasNeueBook");
-  src: url(/wp-content/themes/medal/fonts/BebasNeueBook.otf) format("opentype");
+  src: url(mythemetwo/medal/wp-content/themes/medal/fonts/BebasNeueBook.otf) format("opentype");
   font-display: swap; }
 @font-face {
   font-family: 'Oswald-Light';
   src: local("Oswald-Light.ttf");
-  src: url(/wp-content/themes/medal/fonts/Oswald-Light.ttf) format("truetype"), url(/wp-content/themes/medal/fonts/Oswald-Light.woff2) format("woff2");
+  src: url(mythemetwo/medal/wp-content/themes/medal/fonts/Oswald-Light.ttf) format("truetype"), url(mythemetwo/medal/wp-content/themes/medal/fonts/Oswald-Light.woff2) format("woff2");
   font-display: swap; }
 @font-face {
   font-family: 'BebasNeueBold';
   src: local("BebasNeueBold");
-  src: url(/wp-content/themes/medal/fonts/BebasNeueBold.otf) format("opentype");
+  src: url(mythemetwo/medal/wp-content/themes/medal/fonts/BebasNeueBold.otf) format("opentype");
   font-display: swap; }
 @font-face {
   font-family: 'Oswald-Medium';
   src: local("Oswald-Medium");
-  src: url(/wp-content/themes/medal/fonts/Oswald-Medium.ttf) format("truetype"), url(/wp-content/themes/medal/fonts/Oswald-Medium.woff2) format("woff2");
+  src: url(mythemetwo/medal/wp-content/themes/medal/fonts/Oswald-Medium.ttf) format("truetype"), url(mythemetwo/medal/wp-content/themes/medal/fonts/Oswald-Medium.woff2) format("woff2");
   font-display: swap; }
 @font-face {
   font-family: 'PTSans-Bold';
   src: local("PTSans-Bold");
-  src: url(/wp-content/themes/medal/fonts/PTSans-Bold.ttf) format("truetype");
+  src: url(mythemetwo/medal/wp-content/themes/medal/fonts/PTSans-Bold.ttf) format("truetype");
   font-display: swap; }
 @font-face {
   font-family: 'PTSans-Regular';
   src: local("PTSans-Regular");
-  src: url(/wp-content/themes/medal/fonts/PTSans-Regular.ttf) format("truetype");
+  src: url(mythemetwo/medal/wp-content/themes/medal/fonts/PTSans-Regular.ttf) format("truetype");
   font-display: swap; }
 body {
   font-family: 'PTSans-Regular';
@@ -42648,10 +42648,11 @@ input[type="file"] {
       font-size: 2.25rem; } }
 
 .btn_send {
-  display: inline-block;
+  display: inline-flex;
   position: relative;
-  overflow: hidden; }
-  .btn_send:after {
+  overflow: hidden;
+  border-radius: 3px; }
+  .btn_send:before {
     content: '';
     width: 100%;
     height: 200%;
@@ -42663,7 +42664,7 @@ input[type="file"] {
     background: linear-gradient(to left, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
     transform: translate(-100%, -25%) rotate(10deg);
     transition: transform 0.75s; }
-  .btn_send:hover:after {
+  .btn_send:hover:before {
     transform: translate(100%, -25%) rotate(10deg);
     transition: transform 0.75s; }
   .btn_send input[type="submit"] {
@@ -42698,14 +42699,14 @@ input[type="file"] {
   height: 40px;
   position: absolute;
   top: 50%;
-  background: url(/wp-content/themes/medal/img/slider-arrow.svg);
+  background: url(mythemetwo/medal/wp-content/themes/medal/img/slider-arrow.svg);
   background-size: contain;
   transform: translateY(-50%);
   z-index: 3; }
   .swiper-product-prev:focus, .swiper-product-next:focus {
     outline: none; }
   .swiper-product-prev:hover, .swiper-product-next:hover {
-    background: url(/wp-content/themes/medal/img/slider-arrow-hover.svg);
+    background: url(mythemetwo/medal/wp-content/themes/medal/img/slider-arrow-hover.svg);
     background-size: contain; }
 
 .swiper-product-prev {
@@ -42814,11 +42815,10 @@ input[type="file"] {
           font-size: 0.875rem; } }
   .header_bottom, .header_scroll {
     position: relative;
-    background: url(/wp-content/themes/medal/img/menu-bg.svg);
+    background: url(mythemetwo/medal/wp-content/themes/medal/img/menu-bg.svg);
     background-size: 120%;
     background-position: 100%;
-    letter-spacing: 0.64px;
-    padding: 10px 20px; }
+    letter-spacing: 0.64px; }
     @media (max-width: 767px) {
       .header_bottom, .header_scroll {
         background-position: 90%; } }
@@ -42848,30 +42848,44 @@ input[type="file"] {
           .header_bottom .logo img, .header_scroll .logo img {
             width: 80px; } }
     .header_bottom .order-btn, .header_scroll .order-btn {
-      height: 100%;
+      position: relative;
       display: -moz-flex;
       display: -ms-flex;
       display: -o-flex;
       display: flex;
       align-items: center;
-      position: absolute;
-      right: 0;
-      top: 0;
+      overflow: hidden;
       font-size: 1.375rem;
+      line-height: 4rem;
       padding: 0 55px; }
       .header_bottom .order-btn span, .header_scroll .order-btn span {
         display: inline-block;
         margin-top: 5px; }
+      .header_bottom .order-btn:before, .header_scroll .order-btn:before {
+        content: '';
+        width: 100%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        filter: blur;
+        background: linear-gradient(to left, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
+        transform: translate(-100%, -25%) rotate(10deg);
+        transition: transform 0.75s; }
       .header_bottom .order-btn:after, .header_scroll .order-btn:after {
         content: '';
         width: 22px;
         height: 13px;
-        background: url(/wp-content/themes/medal/img/order-arrow.svg);
+        background: url(mythemetwo/medal/wp-content/themes/medal/img/order-arrow.svg);
         position: absolute;
         top: 50%;
         right: 20px;
         transform: translateY(-50%);
         margin-top: 1px; }
+      .header_bottom .order-btn:hover:before, .header_scroll .order-btn:hover:before {
+        transform: translate(100%, -25%) rotate(10deg);
+        transition: transform 0.75s; }
       @media (max-width: 767px) {
         .header_bottom .order-btn, .header_scroll .order-btn {
           display: none; } }
@@ -42926,10 +42940,10 @@ input[type="file"] {
     transition: all 0.55s; }
     .header_scroll_content {
       position: relative;
-      background: url(/wp-content/themes/medal/img/header_scroll_bg.png);
+      background: url(mythemetwo/medal/wp-content/themes/medal/img/header_scroll_bg.png);
       background-size: 120%;
       background-position: 100%;
-      padding: 10px 20px; }
+      padding-left: 20px; }
       .header_scroll_content .menu-item {
         margin-right: 20px;
         margin-top: 5px; }
@@ -43141,7 +43155,7 @@ input[type="file"] {
         height: 100%;
         position: absolute;
         bottom: 0;
-        background: url(/wp-content/themes/medal/img/menu-bg.svg);
+        background: url(mythemetwo/medal/wp-content/themes/medal/img/menu-bg.svg);
         background-size: 300%;
         background-position: 10%;
         opacity: 0;
@@ -43203,7 +43217,7 @@ input[type="file"] {
         content: '';
         width: 22px;
         height: 13px;
-        background: url(/wp-content/themes/medal/img/secondary-arrow.svg);
+        background: url(mythemetwo/medal/wp-content/themes/medal/img/secondary-arrow.svg);
         position: absolute;
         top: 50%;
         right: -27px;
@@ -43352,7 +43366,7 @@ input[type="file"] {
   top: -30px;
   right: 0; }
   .single-products .content_bg {
-    background: url(/wp-content/themes/medal/img/menu-bg.svg);
+    background: url(mythemetwo/medal/wp-content/themes/medal/img/menu-bg.svg);
     background-size: 300%;
     background-position: 50%;
     padding: 65px 0;
@@ -43377,6 +43391,7 @@ input[type="file"] {
     letter-spacing: 0.64px;
     text-transform: uppercase;
     background: #d1a461;
+    border-radius: 0;
     padding: 25px 35px 20px 35px; }
     @media (max-width: 767px) {
       .single-products .content_btn {
@@ -43528,6 +43543,7 @@ input[type="file"] {
   letter-spacing: 0.64px;
   text-transform: uppercase;
   background-color: #d1a461;
+  border-radius: 0;
   padding: 20px 60px 15px 60px;
   margin-bottom: 35px; }
 .p_contact .phones {
@@ -43567,7 +43583,7 @@ input[type="file"] {
   position: absolute;
   top: 25px;
   left: -15px;
-  background: url(/wp-content/themes/medal/img/menu-bg.svg);
+  background: url(mythemetwo/medal/wp-content/themes/medal/img/menu-bg.svg);
   background-size: 400%;
   background-position: 10%; }
 .p_contact #map {
@@ -43677,7 +43693,7 @@ input[type="file"] {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(/wp-content/themes/medal/img/menu-bg.svg);
+    background: url(mythemetwo/medal/wp-content/themes/medal/img/menu-bg.svg);
     background-size: 200%;
     background-position: 50%;
     opacity: 0;
@@ -44018,7 +44034,7 @@ span.wpcf7-not-valid-tip {
       position: fixed;
       bottom: calc(1rem + 60px);
       right: 0.5rem;
-      background: url(/wp-content/themes/medal/img/menu-bg.svg);
+      background: url(mythemetwo/medal/wp-content/themes/medal/img/menu-bg.svg);
       background-size: 400%;
       background-position: 10%;
       z-index: 5;
@@ -44221,7 +44237,7 @@ span.wpcf7-not-valid-tip {
           margin-top: 1rem;
           padding: 0.75rem; } }
   .modal_block {
-    background: url(/wp-content/themes/medal/img/menu-bg.svg);
+    background: url(mythemetwo/medal/wp-content/themes/medal/img/menu-bg.svg);
     background-size: 400%;
     background-position: 10%; }
     @media (max-width: 767px) {
@@ -44279,7 +44295,7 @@ span.wpcf7-not-valid-tip {
     display: inline-block;
     border: 2px solid #d1a461;
     padding: 3px 20px 0px 20px;
-    margin: 1.5rem 0; }
+    margin: 0; }
   .modal input[type="file"] + label {
     color: #000; }
   @media (max-width: 767px) {

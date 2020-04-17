@@ -65,7 +65,7 @@
 				</div>
 			</div>
 			<div class="w-full inline-flex justify-end px-4 lg:px-0">
-				<div class="content_btn flex justify-center items-center modal_click_js cursor-pointer mb-8" data-modal-id="modal_innerorder">
+				<div class="content_btn btn_send flex justify-center items-center modal_click_js cursor-pointer mb-8" data-modal-id="modal_innerorder">
 					<span class="mr-4"><?php _e('Рассчитать заказ', 's-cast'); ?></span>
 					<img src="<?php bloginfo('template_url'); ?>/img/order-arrow.svg" alt="" width="25px" class="-mt-1">
 				</div>
