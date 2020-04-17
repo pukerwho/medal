@@ -41082,7 +41082,7 @@ html {
 
 html[lang="uk"] {
   --secondary_font: 'Oswald-Light';
-  --highlight_font: 'Oswald-Bold'; }
+  --highlight_font: 'Oswald-Medium'; }
 
 .glightbox-container {
   width: 100%;
@@ -42485,7 +42485,7 @@ button.swiper-pagination-bullet {
 @font-face {
   font-family: 'Oswald-Light';
   src: local("Oswald-Light.ttf");
-  src: url(/wp-content/themes/medal/fonts/Oswald-Light.ttf) format("truetype");
+  src: url(/wp-content/themes/medal/fonts/Oswald-Light.ttf) format("truetype"), url(/wp-content/themes/medal/fonts/Oswald-Light.woff2) format("woff2");
   font-display: swap; }
 @font-face {
   font-family: 'BebasNeueBold';
@@ -42493,9 +42493,9 @@ button.swiper-pagination-bullet {
   src: url(/wp-content/themes/medal/fonts/BebasNeueBold.otf) format("opentype");
   font-display: swap; }
 @font-face {
-  font-family: 'Oswald-Bold';
-  src: local("Oswald-Bold");
-  src: url(/wp-content/themes/medal/fonts/Oswald-Bold.ttf) format("truetype");
+  font-family: 'Oswald-Medium';
+  src: local("Oswald-Medium");
+  src: url(/wp-content/themes/medal/fonts/Oswald-Medium.ttf) format("truetype"), url(/wp-content/themes/medal/fonts/Oswald-Medium.woff2) format("woff2");
   font-display: swap; }
 @font-face {
   font-family: 'PTSans-Bold';
