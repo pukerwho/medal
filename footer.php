@@ -28,32 +28,38 @@
     
     <div class="modal modal_order" data-modal-id="modal_order">
     	<div class="modal_block rounded-lg shadow-lg">
-        <div class="flex flex-col lg:flex-row items-center px-4 py-8 lg:px-12">
-          <div class="w-full lg:w-1/2 pr-0 lg:pr-10">
-            <div>
-              <h3 class="secondary-font text-black text-3xl text-center uppercase mb-6"><?php _e( 'Заказать просчет', 's-cast' ); ?></h3>
+        <div class="px-4 py-8 lg:px-12">
+          <h3 class="secondary-font text-black text-3xl text-center uppercase mb-6">
+            <?php _e( 'Заказать просчет', 's-cast' ); ?>
+          </h3>
+          <div class="flex flex-col lg:flex-row items-center">
+            <div class="w-full lg:w-1/2 pr-0 lg:pr-10">
               <div>
-                <?php 
-                  $form_header = carbon_get_theme_option(
-                'crb_form_header'); 
-                  echo do_shortcode(''. $form_header .'');
-                ?>
-                <div class="close_btn"><?php _e('Закрыть', 's-cast'); ?></div>
+                <div>
+                  <?php 
+                    $form_header = carbon_get_theme_option(
+                  'crb_form_header'); 
+                    echo do_shortcode(''. $form_header .'');
+                  ?>
+                  <div class="close_btn"><?php _e('Закрыть', 's-cast'); ?></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="hidden lg:block w-full lg:w-1/2 pl-0 lg:pl-10">
-            <?php get_template_part('blocks/footer-contact'); ?>
+            <div class="hidden lg:block w-full lg:w-1/2 pl-0 lg:pl-10">
+              <?php get_template_part('blocks/footer-contact'); ?>
+            </div>
           </div>
         </div>
     	</div>
     </div>
     <div class="modal modal_innerorder" data-modal-id="modal_innerorder">
       <div class="modal_block rounded-lg shadow-lg">
-        <div class="flex flex-col lg:flex-row items-center px-4 py-8 lg:px-12">
-          <div class="w-full lg:w-1/2 pr-0 lg:pr-10">
-            <div>
-              <h3 class="secondary-font text-black text-3xl text-center uppercase mb-6"><?php _e( 'Заказать просчет', 's-cast' ); ?></h3>
+        <div class="px-4 py-8 lg:px-12">
+          <h3 class="secondary-font text-black text-3xl text-center uppercase mb-6">
+            <?php _e( 'Заказать просчет', 's-cast' ); ?>
+          </h3>
+          <div class="flex flex-col lg:flex-row items-center">
+            <div class="w-full lg:w-1/2 pr-0 lg:pr-10">
               <div>
                 <?php 
                   $form_innerpage = carbon_get_theme_option(
@@ -63,10 +69,10 @@
                 <div class="close_btn"><?php _e('Закрыть', 's-cast'); ?></div>
               </div>
             </div>
-          </div>
-          <div class="hidden lg:block w-full lg:w-1/2 pl-0 lg:pl-10">
-            <?php get_template_part('blocks/footer-contact'); ?>
-          </div>
+            <div class="hidden lg:block w-full lg:w-1/2 pl-0 lg:pl-10">
+              <?php get_template_part('blocks/footer-contact'); ?>
+            </div>
+          </div>  
         </div>
       </div>
     </div>
