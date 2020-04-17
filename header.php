@@ -91,8 +91,8 @@
       </div>
 
       <!-- HEADER BOTTOM -->
-      <div class="header_bottom flex justify-between items-center">
-        <div class="flex items-center justify-between md:justify-start pl-5">
+      <div class="header_bottom flex justify-between items-center py-2 lg:py-0">
+        <div class="w-full lg:w-auto flex items-center justify-between md:justify-start pl-5 pr-5 lg:pr-0">
           <div class="logo">
             <a href="<?php echo home_url(); ?>">
               <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="Логотип">
