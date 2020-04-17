@@ -42746,7 +42746,7 @@ input[type="file"] {
       .header_top {
         display: none; } }
     .header_top .menu {
-      margin-right: 80px; }
+      margin-right: 60px; }
       .header_top .menu-item {
         margin-right: 20px;
         white-space: nowrap; }
@@ -42755,6 +42755,8 @@ input[type="file"] {
             font-size: 0.875rem; } }
         .header_top .menu-item:last-of-type {
           margin-right: 0; }
+        .header_top .menu-item li {
+          margin-bottom: 0; }
         .header_top .menu-item a {
           color: #ffffff;
           font-size: 1rem; }
@@ -44157,7 +44159,7 @@ span.wpcf7-not-valid-tip {
       background: linear-gradient(180deg, rgba(34, 193, 195, 0) 50%, #05050f 100%); } }
 
 .social {
-  margin-right: 50px; }
+  margin-right: 40px; }
   .social a {
     margin-right: 10px; }
     .social a:last-of-type {
