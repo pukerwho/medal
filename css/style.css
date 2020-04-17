@@ -43843,7 +43843,7 @@ input:focus {
 input[type="submit"] {
   width: auto !important;
   display: block;
-  color: #ffffff;
+  color: #ffffff !important;
   font-family: var(--secondary_font);
   font-size: 18px !important;
   letter-spacing: 0.64px;
@@ -44216,7 +44216,7 @@ span.wpcf7-not-valid-tip {
       z-index: 10;
       transition: opacity 0.35s; }
   .modal_callback input[type=submit] {
-    width: 100%; }
+    width: 100% !important; }
   .modal .footer_phones a, .modal .footer_emails a {
     font-family: var(--secondary_font);
     color: #000;
@@ -44243,7 +44243,6 @@ span.wpcf7-not-valid-tip {
   .modal input[type="submit"] {
     display: inline-block;
     border: 2px solid #d1a461;
-    float: left;
     padding: 3px 20px 0px 20px;
     margin: 1.5rem 0; }
   .modal input[type="file"] + label {
