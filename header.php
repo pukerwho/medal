@@ -26,7 +26,7 @@
 <body <?php echo body_class('text-white'); ?>>
   <!-- <div class="preloader"></div> -->
   <header id="header" class="header" role="banner">
-    <div class="container mx-auto p-4 xl:p-0">
+    <div class="container mx-auto p-4 lg:p-0">
       <!-- HEADER TOP -->
       <div class="header_top">
         <div class="flex justify-between items-center">
