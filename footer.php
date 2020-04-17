@@ -32,7 +32,7 @@
           <h3 class="secondary-font text-black text-3xl text-center uppercase mb-6">
             <?php _e( 'Заказать просчет', 's-cast' ); ?>
           </h3>
-          <div class="flex flex-col lg:flex-row items-center">
+          <div class="flex flex-col lg:flex-row">
             <div class="w-full lg:w-1/2 pr-0 lg:pr-10">
               <div>
                 <div>
@@ -58,7 +58,7 @@
           <h3 class="secondary-font text-black text-3xl text-center uppercase mb-6">
             <?php _e( 'Заказать просчет', 's-cast' ); ?>
           </h3>
-          <div class="flex flex-col lg:flex-row items-center">
+          <div class="flex flex-col lg:flex-row">
             <div class="w-full lg:w-1/2 pr-0 lg:pr-10">
               <div>
                 <?php 
