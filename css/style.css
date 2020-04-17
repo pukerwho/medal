@@ -44217,10 +44217,6 @@ span.wpcf7-not-valid-tip {
       transition: opacity 0.35s; }
   .modal_callback input[type=submit] {
     width: 100% !important; }
-  .modal_callback div.wpcf7-response-output {
-    color: #000;
-    margin: 0;
-    padding: 1rem; }
   .modal .footer_phones a, .modal .footer_emails a {
     font-family: var(--secondary_font);
     color: #000;
@@ -44229,6 +44225,11 @@ span.wpcf7-not-valid-tip {
     font-family: var(--secondary_font);
     font-size: 1.25rem;
     color: #000; }
+  .modal div.wpcf7-response-output {
+    width: 100%;
+    color: #000;
+    margin: 0;
+    padding: 1rem; }
   .modal input, .modal textarea {
     border: 2px solid #060b0d;
     color: #060b0d; }
