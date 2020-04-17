@@ -42647,6 +42647,28 @@ input[type="file"] {
     .large-font {
       font-size: 2.25rem; } }
 
+.btn_send {
+  display: inline-block;
+  position: relative;
+  overflow: hidden; }
+  .btn_send:after {
+    content: '';
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    filter: blur;
+    background: linear-gradient(to left, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
+    transform: translate(-100%, -25%) rotate(10deg);
+    transition: transform 0.75s; }
+  .btn_send:hover:after {
+    transform: translate(100%, -25%) rotate(10deg);
+    transition: transform 0.75s; }
+  .btn_send input[type="submit"] {
+    margin: 0; }
+
 .archive #content, .page-template #content, .page-template-default #content {
   padding-top: 180px; }
   @media (max-width: 767px) {
@@ -43829,9 +43851,6 @@ input[type="file"] {
   .cats .order-string {
     text-align: center; } }
 
-b, strong {
-  font-family: 'Roboto-Bold'; }
-
 input, textarea {
   width: 100%;
   color: #ffffff;
@@ -43860,6 +43879,7 @@ input[type="submit"] {
   text-transform: uppercase;
   background-color: #d1a461 !important;
   border: none !important;
+  overflow: hidden;
   cursor: pointer;
   margin: 1.5rem 0; }
   @media (max-width: 767px) {
