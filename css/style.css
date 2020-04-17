@@ -41081,8 +41081,8 @@ html {
   --highlight_font: 'BebasNeueBold'; }
 
 html[lang="uk"] {
-  --secondary_font: 'BebasNeueUkr';
-  --highlight_font: 'BebasNeueUkr'; }
+  --secondary_font: 'Oswald-Light';
+  --highlight_font: 'Oswald-Bold'; }
 
 .glightbox-container {
   width: 100%;
@@ -42483,14 +42483,19 @@ button.swiper-pagination-bullet {
   src: url(/wp-content/themes/medal/fonts/BebasNeueBook.otf) format("opentype");
   font-display: swap; }
 @font-face {
-  font-family: 'BebasNeueUkr';
-  src: local("BebasNeueUkr");
-  src: url(/wp-content/themes/medal/fonts/Bebas_Neue_Cyrillic.ttf) format("truetype");
+  font-family: 'Oswald-Light';
+  src: local("Oswald-Light.ttf");
+  src: url(/wp-content/themes/medal/fonts/Oswald-Light.ttf) format("truetype");
   font-display: swap; }
 @font-face {
   font-family: 'BebasNeueBold';
   src: local("BebasNeueBold");
   src: url(/wp-content/themes/medal/fonts/BebasNeueBold.otf) format("opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Oswald-Bold';
+  src: local("Oswald-Bold");
+  src: url(/wp-content/themes/medal/fonts/Oswald-Bold.ttf) format("truetype");
   font-display: swap; }
 @font-face {
   font-family: 'PTSans-Bold';
