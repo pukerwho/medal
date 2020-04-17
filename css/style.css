@@ -43841,17 +43841,17 @@ input:focus {
   outline: none; }
 
 input[type="submit"] {
-  width: auto;
+  width: auto !important;
+  display: block;
   color: #ffffff;
   font-family: var(--secondary_font);
-  font-size: 18px;
+  font-size: 18px !important;
   letter-spacing: 0.64px;
   text-transform: uppercase;
-  background-color: #d1a461;
-  border: none;
-  float: right;
+  background-color: #d1a461 !important;
+  border: none !important;
   cursor: pointer;
-  margin-bottom: 0; }
+  margin: 1.5rem 0; }
   @media (max-width: 767px) {
     input[type="submit"] {
       width: 100%; } }
@@ -43859,6 +43859,12 @@ input[type="submit"] {
 div.wpcf7 .ajax-loader {
   position: absolute;
   transform: translateY(100%); }
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+  border: 2px solid #d1a461; }
+
+span.wpcf7-not-valid-tip {
+  margin-bottom: 1rem; }
 
 #content {
   transition: visibility 0.1s; }
@@ -44235,9 +44241,11 @@ div.wpcf7 .ajax-loader {
   .modal ::placeholder {
     color: #060b0d; }
   .modal input[type="submit"] {
-    padding: 3px 20px 0px 20px;
+    display: inline-block;
     border: 2px solid #d1a461;
-    float: left; }
+    float: left;
+    padding: 3px 20px 0px 20px;
+    margin: 1.5rem 0; }
   .modal input[type="file"] + label {
     color: #000; }
   @media (max-width: 767px) {
