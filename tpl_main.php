@@ -31,7 +31,7 @@ Template Name: ГЛАВНАЯ
 								</div>
 								<div class="container mx-auto px-4 lg:px-0">
 									<div class="slide_title large-font">
-										<?php echo $slider_item['crb_hero_slide_title']; ?>
+										<span class="relative z-10"><?php echo $slider_item['crb_hero_slide_title']; ?></span>
 									</div>
 								</div>
 							</div>
