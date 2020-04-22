@@ -38,11 +38,11 @@ Template Name: ГЛАВНАЯ
 						</div>
 					<?php endforeach; ?>
 				</div>
-				<div class="container mx-auto px-4 lg:px-0">
+				<!-- <div class="container mx-auto px-4 lg:px-0">
 					<div class="slider_pagination">
 						<div class="swiper-pagination-hero swiper-pagination"></div>		
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
