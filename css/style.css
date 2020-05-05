@@ -43764,8 +43764,8 @@ input[type="file"] {
     opacity: 0.5;
     -webkit-filter: blur;
     filter: blur;
-    background: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(40%, #fff), color-stop(60%, #fff), to(transparent));
     background: -o-linear-gradient(right, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
+    background: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(40%, #fff), color-stop(60%, #fff), to(transparent));
     background: linear-gradient(to left, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
     -webkit-transform: translate(-100%, -25%) rotate(10deg);
     -ms-transform: translate(-100%, -25%) rotate(10deg);
@@ -43786,6 +43786,11 @@ input[type="file"] {
     transition: transform 0.75s, -webkit-transform 0.75s; }
   .btn_send input[type="submit"] {
     margin: 0; }
+
+html[lang="ru-RU"] .tax-cats .about_photo img {
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain; }
 
 .archive #content, .page-template #content, .page-template-default #content {
   padding-top: 180px; }
@@ -44018,8 +44023,8 @@ input[type="file"] {
         opacity: 0.5;
         -webkit-filter: blur;
         filter: blur;
-        background: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(40%, #fff), color-stop(60%, #fff), to(transparent));
         background: -o-linear-gradient(right, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
+        background: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(40%, #fff), color-stop(60%, #fff), to(transparent));
         background: linear-gradient(to left, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
         -webkit-transform: translate(-100%, -25%) rotate(10deg);
         -ms-transform: translate(-100%, -25%) rotate(10deg);
@@ -44082,11 +44087,13 @@ input[type="file"] {
               right: 0;
               left: auto; }
             .header_bottom .menu-humburger span:nth-of-type(2), .header_scroll .menu-humburger span:nth-of-type(2) {
+              top: -webkit-calc(50% - 5px);
               top: calc(50% - 5px);
               -webkit-transform: translateY(-1px);
               -ms-transform: translateY(-1px);
               transform: translateY(-1px); }
             .header_bottom .menu-humburger span:nth-of-type(3), .header_scroll .menu-humburger span:nth-of-type(3) {
+              top: -webkit-calc(50% + 5px);
               top: calc(50% + 5px);
               -webkit-transform: translateY(-1px);
               -ms-transform: translateY(-1px);
@@ -44276,8 +44283,8 @@ input[type="file"] {
     position: absolute;
     top: 0;
     left: 0;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(17%, #060b0d), to(transparent));
     background: -o-linear-gradient(bottom, #060b0d 17%, transparent);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(17%, #060b0d), to(transparent));
     background: linear-gradient(to top, #060b0d 17%, transparent); }
   .hero .slider .slide {
     position: relative;
@@ -44335,13 +44342,15 @@ input[type="file"] {
       position: absolute;
       top: 0;
       background: #060b0d;
-      background: -webkit-gradient(linear, left top, right top, from(rgba(6, 11, 13, 0)), color-stop(5%, #060b0d));
       background: -o-linear-gradient(left, rgba(6, 11, 13, 0) 0%, #060b0d 5%);
+      background: -webkit-gradient(linear, left top, right top, from(rgba(6, 11, 13, 0)), color-stop(5%, #060b0d));
       background: linear-gradient(90deg, rgba(6, 11, 13, 0) 0%, #060b0d 5%);
       z-index: 2;
+      left: -webkit-calc(100% - 70px);
       left: calc(100% - 70px); }
       @media (max-width: 767px) {
         .products .slider .swiper-product-container:after {
+          left: -webkit-calc(100% - 40px);
           left: calc(100% - 40px); } }
     .products .slider .swiper-product-container:before {
       content: '';
@@ -44350,13 +44359,15 @@ input[type="file"] {
       position: absolute;
       top: 0;
       background: #060b0d;
-      background: -webkit-gradient(linear, left top, right top, color-stop(95%, #060b0d), to(rgba(0, 121, 107, 0)));
       background: -o-linear-gradient(left, #060b0d 95%, rgba(0, 121, 107, 0) 100%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(95%, #060b0d), to(rgba(0, 121, 107, 0)));
       background: linear-gradient(90deg, #060b0d 95%, rgba(0, 121, 107, 0) 100%);
       z-index: 2;
+      right: -webkit-calc(100% - 70px);
       right: calc(100% - 70px); }
       @media (max-width: 767px) {
         .products .slider .swiper-product-container:before {
+          right: -webkit-calc(100% - 40px);
           right: calc(100% - 40px); } }
   @media (max-width: 767px) {
     .products .slider .swiper-slide-active .slide_img img {
@@ -44498,6 +44509,7 @@ input[type="file"] {
   .other_products_item_info {
     position: absolute;
     width: 80%;
+    width: -webkit-calc(100% - 60px);
     width: calc(100% - 60px);
     height: 100%;
     top: 0;
@@ -44548,9 +44560,11 @@ input[type="file"] {
     top: 0;
     background-color: rgba(6, 11, 13, 0.8);
     z-index: 2;
+    left: -webkit-calc(100% - 70px);
     left: calc(100% - 70px); }
     @media (max-width: 767px) {
       .swiper-other_products-container:after, .swiper-container-clients:after {
+        left: -webkit-calc(100% - 40px);
         left: calc(100% - 40px); } }
   .swiper-other_products-container:before, .swiper-container-clients:before {
     content: '';
@@ -44560,9 +44574,11 @@ input[type="file"] {
     top: 0;
     background-color: rgba(6, 11, 13, 0.8);
     z-index: 2;
+    right: -webkit-calc(100% - 70px);
     right: calc(100% - 70px); }
     @media (max-width: 767px) {
       .swiper-other_products-container:before, .swiper-container-clients:before {
+        right: -webkit-calc(100% - 40px);
         right: calc(100% - 40px); } }
 
 .rules {
@@ -45055,7 +45071,7 @@ input[type="file"] {
       width: 100%; } }
 .tech_block_photo {
   width: 60%;
-  height: 590px;
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -45072,6 +45088,7 @@ input[type="file"] {
     object-fit: cover; }
 .tech_block:nth-child(2n) .tech_block_content {
   margin-left: 61%;
+  margin-left: -webkit-calc(60% + 1rem);
   margin-left: calc(60% + 1rem); }
   @media (max-width: 767px) {
     .tech_block:nth-child(2n) .tech_block_content {
@@ -45266,6 +45283,7 @@ span.wpcf7-not-valid-tip {
 .mobile_cover {
   width: 100%;
   min-height: 100vh;
+  min-height: -webkit-calc(100vh + 1px);
   min-height: calc(100vh + 1px);
   position: fixed;
   z-index: -1;
@@ -45285,6 +45303,7 @@ span.wpcf7-not-valid-tip {
   .mobile_cover_top {
     margin-bottom: 20px; }
   .mobile_cover_bottom {
+    width: -webkit-calc(100% - 20px);
     width: calc(100% - 20px);
     position: absolute;
     bottom: 60px;
@@ -45387,6 +45406,7 @@ span.wpcf7-not-valid-tip {
       -ms-flex-direction: column;
       flex-direction: column;
       position: fixed;
+      bottom: -webkit-calc(1rem + 60px);
       bottom: calc(1rem + 60px);
       right: 0.5rem;
       background: url(/wp-content/themes/medal/img/menu-bg.svg);
@@ -45589,21 +45609,21 @@ span.wpcf7-not-valid-tip {
     background-color: #05050e; } }
 .products_item_info {
   background: #262626;
-  background: -webkit-gradient(linear, left top, right top, from(#262626), color-stop(70%, #05050f));
   background: -o-linear-gradient(left, #262626 0%, #05050f 70%);
+  background: -webkit-gradient(linear, left top, right top, from(#262626), color-stop(70%, #05050f));
   background: linear-gradient(90deg, #262626 0%, #05050f 70%); }
   @media (max-width: 767px) {
     .products_item_info {
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #05050f), to(#262626));
       background: -o-linear-gradient(top, #05050f 30%, #262626 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #05050f), to(#262626));
       background: linear-gradient(180deg, #05050f 30%, #262626 100%); } }
 .products_item_title a {
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;
   transition: all 0.35s; }
   .products_item_title a:hover {
-    background-image: -webkit-gradient(linear, left top, right top, from(#f7b733), color-stop(25%, #fc4a1a), to(#f7b733));
     background-image: -o-linear-gradient(left, #f7b733, #fc4a1a 25%, #f7b733);
+    background-image: -webkit-gradient(linear, left top, right top, from(#f7b733), color-stop(25%, #fc4a1a), to(#f7b733));
     background-image: linear-gradient(to right, #f7b733, #fc4a1a 25%, #f7b733);
     color: transparent;
     -webkit-background-clip: text;
@@ -45639,8 +45659,8 @@ span.wpcf7-not-valid-tip {
       position: absolute;
       top: 0;
       left: 0;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(34, 193, 195, 0)), to(#05050f));
       background: -o-linear-gradient(top, rgba(34, 193, 195, 0) 50%, #05050f 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(34, 193, 195, 0)), to(#05050f));
       background: linear-gradient(180deg, rgba(34, 193, 195, 0) 50%, #05050f 100%); } }
 
 .social {
@@ -45800,8 +45820,8 @@ span.wpcf7-not-valid-tip {
 
 /* PAGEs */
 .page .title {
-  background-image: -webkit-gradient(linear, left top, right top, from(#f7b733), color-stop(25%, #fc4a1a), to(#f7b733));
   background-image: -o-linear-gradient(left, #f7b733, #fc4a1a 25%, #f7b733);
+  background-image: -webkit-gradient(linear, left top, right top, from(#f7b733), color-stop(25%, #fc4a1a), to(#f7b733));
   background-image: linear-gradient(to right, #f7b733, #fc4a1a 25%, #f7b733);
   color: transparent;
   -webkit-background-clip: text;
