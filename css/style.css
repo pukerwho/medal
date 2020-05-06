@@ -43787,11 +43787,6 @@ input[type="file"] {
   .btn_send input[type="submit"] {
     margin: 0; }
 
-html[lang="ru-RU"] .tax-cats .about_photo img {
-  height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain; }
-
 .archive #content, .page-template #content, .page-template-default #content {
   padding-top: 180px; }
   @media (max-width: 767px) {
