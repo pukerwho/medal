@@ -14,6 +14,9 @@ function crb_attach_theme_options() {
         Field::make( 'text', 'crb_form_inner', 'Шорткод для Заказать просчет (на странице продукции)' ),
         Field::make( 'text', 'crb_form_callback', 'Шорткод для Заказать звонок' ),
         Field::make( 'text', 'crb_form_contact', 'Шорткод для страницы Контакты' ),
+    ) )
+    ->add_tab( __('Сторонние сервисы'), array(
+        Field::make( 'textarea', 'crb_analytics', 'Google Analytics' )
     ) );
 }
 
