@@ -253,7 +253,7 @@
         <?php endforeach; ?>
         <?php $header_phones = carbon_get_post_meta($contact_page, 'crb_contact_phones');
         foreach ($header_phones as $header_phone): ?>
-          <a href="tel:<?php echo $footer_phone['crb_contact_phone'] ?>" class="phone-link">
+          <a href="tel:<?php echo $header_phone['crb_contact_phone'] ?>" class="phone-link">
             <?php echo $header_phone['crb_contact_phone'] ?>
           </a>
         <?php endforeach; ?>
