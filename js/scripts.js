@@ -26,6 +26,15 @@ function init() {
     fixedHeader(currentScroll);
   });
 
+  //Hero slider
+  var heroSlideHeight = window.screen.height * 0.8;
+  let heroSliderSlides = document.querySelectorAll('.hero .slider .slide');
+  for (heroSliderSlide of heroSliderSlides) {
+    if (heroSliderSlide) {
+      heroSliderSlide.style.height = heroSlideHeight + 'px';
+    }
+  }
+
   //HeaderScrollSub
   // let headerScrollSub = document.querySelector('.header_scroll_sub');
   // let headerScrollCatalogBtn = document.querySelector('.header_scroll .catalog');
