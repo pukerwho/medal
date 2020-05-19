@@ -32,8 +32,10 @@ function init() {
   for (heroSliderSlide of heroSliderSlides) {
     if (heroSliderSlide) {
       heroSliderSlide.style.height = heroSlideHeight + 'px';
+      console.log(heroSliderSlides);
     }
   }
+  console.log(heroSlideHeight);
 
   //HeaderScrollSub
   // let headerScrollSub = document.querySelector('.header_scroll_sub');
