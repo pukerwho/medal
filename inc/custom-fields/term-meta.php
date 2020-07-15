@@ -13,6 +13,7 @@ function crb_term_options() {
     	Field::make( 'image', 'crb_term_photo', 'Заглавная картинка' )->set_value_type( 'url'),
     	Field::make( 'text', 'crb_term_titletext', 'Заголовок для текста' ),
     	Field::make( 'rich_text', 'crb_term_seotext', 'Текст' ),
+    	Field::make( 'rich_text', 'crb_term_fulltext', 'Текст от копирайтера' ),
     ) );
 }
 

@@ -67,5 +67,10 @@
 		</div>
 		<img src="<?php echo carbon_get_term_meta( get_queried_object_id(), 'crb_term_photo' ); ?>" alt="" class="about_bg">
 	</div>
+	<div class="container mx-auto py-8">
+		<div class="mb-8">
+			<?php echo apply_filters( 'the_content', carbon_get_term_meta( get_queried_object_id(), 'crb_term_fulltext' ) ); ?>
+		</div>
+	</div>
 </div>
 <?php get_footer(); ?>
